@@ -47,6 +47,10 @@ public class GsonStorageHandler<T> extends FileStorageHandler<T> {
     protected final Type type;
     protected final Gson gson;
 
+    public GsonStorageHandler(String fileName, File dataFolder, Class<T> clazz) {
+        this(fileName, ".json", dataFolder, TypeToken.of(clazz));
+    }
+
     public GsonStorageHandler(String fileName, String fileExtension, File dataFolder, Class<T> clazz) {
         this(fileName, fileExtension, dataFolder, TypeToken.of(clazz));
     }

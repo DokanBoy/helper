@@ -40,6 +40,7 @@ import me.lucko.helper.scoreboard.PacketScoreboardProvider;
 import me.lucko.helper.scoreboard.ScoreboardProvider;
 import me.lucko.helper.signprompt.PacketSignPromptFactory;
 import me.lucko.helper.signprompt.SignPromptFactory;
+import me.lucko.helper.utils.Log;
 import org.bukkit.plugin.ServicePriority;
 
 final class HelperServices {
@@ -48,6 +49,7 @@ final class HelperServices {
     static void setup(ExtendedJavaPlugin plugin) {
         plugin.provideService(HologramFactory.class, new BukkitHologramFactory());
         plugin.provideService(BungeeCord.class, new BungeeCordImpl(plugin));
+
         if (plugin.isPluginPresent("ProtocolLib")) {
             PacketScoreboardProvider scoreboardProvider = new PacketScoreboardProvider(plugin);
             plugin.provideService(ScoreboardProvider.class, scoreboardProvider);
@@ -60,20 +62,31 @@ final class HelperServices {
                 IndividualHologramFactory hologramFactory = new PacketIndividualHologramFactory();
                 plugin.provideService(IndividualHologramFactory.class, hologramFactory);
             } catch (Throwable t) {
+                Log.severe("IndividualHologramFactory was not registered! Reason: " + t.getMessage());
                 // ignore??
             }
+        } else {
+            Log.severe("ProtocolLib is not installed. Services: ScoreboardProvider, PacketScoreboardProvider, SignPromptFactory " +
+                "and IndividualHologramFactory was not registered!");
         }
+
+
         if (plugin.isPluginPresent("Citizens")) {
             CitizensNpcFactory npcManager = plugin.bind(new CitizensNpcFactory());
             plugin.provideService(NpcFactory.class, npcManager);
             plugin.provideService(CitizensNpcFactory.class, npcManager);
+        } else {
+            Log.severe("Citizens is not installed. Services: NpcFactory, CitizensNpcFactory was not registered!");
         }
+
+
         if (plugin.isPluginPresent("ViaVersion")) {
             BossBarFactory bossBarFactory = new ViaBossBarFactory();
             plugin.provideService(BossBarFactory.class, bossBarFactory, ServicePriority.High);
         } else if (classExists("org.bukkit.boss.BossBar")) {
             BossBarFactory bossBarFactory = new BukkitBossBarFactory(plugin.getServer());
             plugin.provideService(BossBarFactory.class, bossBarFactory);
+            Log.severe("ViaVersion is not installed. Using BukkitBossBarFactory instead ViaBossBarFactory!");
         }
     }
 
