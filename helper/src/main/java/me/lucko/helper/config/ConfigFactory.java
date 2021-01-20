@@ -108,7 +108,6 @@ public abstract class ConfigFactory<N extends ConfigurationNode, L extends Confi
         helperSerializers.register(TypeToken.of(String.class), ColoredStringTypeSerializer.INSTANCE);
 
         TYPE_SERIALIZERS = ConfigurateComponentSerializer.configurate().addSerializersTo(helperSerializers);
-        //TYPE_SERIALIZERS = helperSerializers.newChild();
     }
 
     @Nonnull
