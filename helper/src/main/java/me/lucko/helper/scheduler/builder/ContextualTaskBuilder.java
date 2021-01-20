@@ -28,9 +28,8 @@ package me.lucko.helper.scheduler.builder;
 import me.lucko.helper.scheduler.Scheduler;
 import me.lucko.helper.scheduler.Task;
 
-import java.util.function.Consumer;
-
 import javax.annotation.Nonnull;
+import java.util.function.Consumer;
 
 /**
  * Queues execution of tasks using {@link Scheduler}, often combining parameters with

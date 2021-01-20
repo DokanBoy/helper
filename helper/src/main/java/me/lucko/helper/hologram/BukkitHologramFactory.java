@@ -27,7 +27,6 @@ package me.lucko.helper.hologram;
 
 import com.google.common.base.Preconditions;
 import com.google.gson.JsonObject;
-
 import me.lucko.helper.Events;
 import me.lucko.helper.Helper;
 import me.lucko.helper.gson.JsonBuilder;
@@ -35,15 +34,10 @@ import me.lucko.helper.reflect.MinecraftVersion;
 import me.lucko.helper.reflect.MinecraftVersions;
 import me.lucko.helper.serialize.Position;
 import me.lucko.helper.terminable.composite.CompositeTerminable;
-
-import me.lucko.helper.text3.Text;
+import me.lucko.helper.text.Text;
 import org.bukkit.Chunk;
 import org.bukkit.Location;
-import org.bukkit.entity.ArmorStand;
-import org.bukkit.entity.Entity;
-import org.bukkit.entity.EntityType;
-import org.bukkit.entity.Pig;
-import org.bukkit.entity.Player;
+import org.bukkit.entity.*;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.PigZapEvent;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
@@ -51,6 +45,8 @@ import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -59,9 +55,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 public class BukkitHologramFactory implements HologramFactory {
 

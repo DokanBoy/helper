@@ -27,7 +27,6 @@ package me.lucko.helper.network.metadata;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.JsonElement;
-
 import me.lucko.helper.gson.GsonProvider;
 
 import java.util.Objects;

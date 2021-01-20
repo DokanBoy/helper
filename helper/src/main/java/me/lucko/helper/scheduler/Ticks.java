@@ -25,9 +25,8 @@
 
 package me.lucko.helper.scheduler;
 
-import java.util.concurrent.TimeUnit;
-
 import javax.annotation.Nonnull;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Utility for converting between Minecraft game ticks and standard durations.

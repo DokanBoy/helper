@@ -26,14 +26,12 @@
 package me.lucko.helper.npc;
 
 import me.lucko.helper.metadata.MetadataMap;
-
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
-import java.util.function.Consumer;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.function.Consumer;
 
 /**
  * Represents a NPC (non-player character)

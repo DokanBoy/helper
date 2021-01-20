@@ -27,9 +27,8 @@ package me.lucko.helper.signprompt;
 
 import org.bukkit.entity.Player;
 
-import java.util.List;
-
 import javax.annotation.Nonnull;
+import java.util.List;
 
 /**
  * Represents an object which can accept input from players using signs.

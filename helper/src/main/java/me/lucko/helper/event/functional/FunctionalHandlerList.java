@@ -25,10 +25,9 @@
 
 package me.lucko.helper.event.functional;
 
+import javax.annotation.Nonnull;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
-
-import javax.annotation.Nonnull;
 
 /**
  * A functional builder which accumulates event handlers

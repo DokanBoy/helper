@@ -26,7 +26,6 @@
 package me.lucko.helper.npc;
 
 import me.lucko.helper.terminable.Terminable;
-
 import org.bukkit.Location;
 
 import javax.annotation.Nonnull;

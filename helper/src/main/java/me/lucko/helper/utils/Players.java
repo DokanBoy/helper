@@ -27,30 +27,21 @@ package me.lucko.helper.utils;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
-
 import me.lucko.helper.Helper;
 import me.lucko.helper.text.Text;
 import me.lucko.helper.utils.annotation.NonnullByDefault;
-
-import org.bukkit.Bukkit;
-import org.bukkit.Effect;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.OfflinePlayer;
-import org.bukkit.Particle;
-import org.bukkit.Sound;
+import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import javax.annotation.Nullable;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.function.Consumer;
 import java.util.stream.Stream;
-
-import javax.annotation.Nullable;
 
 /**
  * A collection of Player related utilities
@@ -87,7 +78,6 @@ public final class Players {
      */
     @Nullable
     public static Player getNullable(String username) {
-        //noinspection deprecation
         return Helper.server().getPlayerExact(username);
     }
 

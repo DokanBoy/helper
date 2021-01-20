@@ -32,7 +32,6 @@ import me.lucko.helper.network.event.NetworkEvent;
 import me.lucko.helper.network.metadata.ServerMetadataProvider;
 import me.lucko.helper.profiles.Profile;
 import me.lucko.helper.terminable.Terminable;
-
 import net.kyori.event.EventBus;
 
 import java.util.Map;

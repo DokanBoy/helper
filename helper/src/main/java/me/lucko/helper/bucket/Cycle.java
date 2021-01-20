@@ -25,9 +25,8 @@
 
 package me.lucko.helper.bucket;
 
-import java.util.List;
-
 import javax.annotation.Nonnull;
+import java.util.List;
 
 /**
  * An infinite cycle of elements.

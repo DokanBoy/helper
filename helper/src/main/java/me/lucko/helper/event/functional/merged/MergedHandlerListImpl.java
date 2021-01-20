@@ -28,12 +28,11 @@ package me.lucko.helper.event.functional.merged;
 import me.lucko.helper.event.MergedSubscription;
 import me.lucko.helper.internal.LoaderUtils;
 
+import javax.annotation.Nonnull;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.BiConsumer;
-
-import javax.annotation.Nonnull;
 
 class MergedHandlerListImpl<T> implements MergedHandlerList<T> {
     private final MergedSubscriptionBuilderImpl<T> builder;

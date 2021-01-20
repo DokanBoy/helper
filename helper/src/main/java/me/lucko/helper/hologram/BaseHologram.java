@@ -27,15 +27,13 @@ package me.lucko.helper.hologram;
 
 import me.lucko.helper.serialize.Position;
 import me.lucko.helper.terminable.Terminable;
-
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Player;
 
-import java.util.Collection;
-import java.util.function.Consumer;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.Collection;
+import java.util.function.Consumer;
 
 /**
  * Base interface for holograms.

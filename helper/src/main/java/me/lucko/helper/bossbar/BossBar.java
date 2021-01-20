@@ -26,12 +26,10 @@
 package me.lucko.helper.bossbar;
 
 import me.lucko.helper.terminable.Terminable;
-
 import org.bukkit.entity.Player;
 
-import java.util.List;
-
 import javax.annotation.Nonnull;
+import java.util.List;
 
 /**
  * Generic interface for bossbars.

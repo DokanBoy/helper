@@ -25,9 +25,8 @@
 
 package me.lucko.helper.metadata;
 
-import java.util.Optional;
-
 import javax.annotation.Nonnull;
+import java.util.Optional;
 
 /**
  * A registry which provides and stores {@link MetadataMap}s for a given type.

@@ -28,11 +28,10 @@ package me.lucko.helper.menu.scheme;
 import com.google.common.collect.Range;
 import me.lucko.helper.menu.Item;
 
-import java.util.Objects;
-import java.util.function.IntFunction;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.Objects;
+import java.util.function.IntFunction;
 
 /**
  * Implements {@link SchemeMapping} using a function.

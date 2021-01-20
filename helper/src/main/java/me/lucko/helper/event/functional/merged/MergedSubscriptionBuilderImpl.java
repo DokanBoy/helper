@@ -26,24 +26,17 @@
 package me.lucko.helper.event.functional.merged;
 
 import com.google.common.reflect.TypeToken;
-
 import me.lucko.helper.event.MergedSubscription;
 import me.lucko.helper.event.functional.ExpiryTestStage;
-
 import org.bukkit.event.Event;
 import org.bukkit.event.EventPriority;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import javax.annotation.Nonnull;
+import java.util.*;
 import java.util.function.BiConsumer;
 import java.util.function.BiPredicate;
 import java.util.function.Function;
 import java.util.function.Predicate;
-
-import javax.annotation.Nonnull;
 
 class MergedSubscriptionBuilderImpl<T> implements MergedSubscriptionBuilder<T> {
     final TypeToken<T> handledClass;

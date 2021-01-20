@@ -28,12 +28,7 @@ package me.lucko.helper.utils;
 import me.lucko.helper.interfaces.Delegate;
 
 import java.util.concurrent.Callable;
-import java.util.function.BiConsumer;
-import java.util.function.BiPredicate;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 /**
  * A collection of utility methods for delegating Java 8 functions

@@ -28,9 +28,8 @@ package me.lucko.helper.scheduler.builder;
 import me.lucko.helper.promise.ThreadContext;
 import me.lucko.helper.scheduler.Scheduler;
 
-import java.util.concurrent.TimeUnit;
-
 import javax.annotation.Nonnull;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Functional builder providing chained access to the functionality in {@link Scheduler};

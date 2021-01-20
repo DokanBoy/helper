@@ -27,21 +27,13 @@ package me.lucko.helper.utils;
 
 import com.google.common.collect.ImmutableMap;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 import java.util.function.Function;
 
 /**
  * An indexing utility.
  */
 public final class Indexing {
-
-    private Indexing() {
-
-    }
 
     /**
      * Builds an index for the given values, using the indexing function.
@@ -127,4 +119,10 @@ public final class Indexing {
         }
         return build(enumConstants, Enum::name);
     }
+
+    private Indexing() {
+        throw new UnsupportedOperationException("This class cannot be instantiated");
+    }
+
+
 }

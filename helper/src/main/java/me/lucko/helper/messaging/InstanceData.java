@@ -25,9 +25,8 @@
 
 package me.lucko.helper.messaging;
 
-import java.util.Set;
-
 import javax.annotation.Nonnull;
+import java.util.Set;
 
 /**
  * Provides information about the current server instance.

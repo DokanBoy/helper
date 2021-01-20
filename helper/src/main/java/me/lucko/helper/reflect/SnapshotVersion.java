@@ -25,17 +25,12 @@
 
 package me.lucko.helper.reflect;
 
+import javax.annotation.Nonnull;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.Locale;
-import java.util.Objects;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import javax.annotation.Nonnull;
 
 /**
  * Encapsulates a snapshot version of Minecraft.
@@ -44,9 +39,9 @@ import javax.annotation.Nonnull;
  */
 public class SnapshotVersion implements Comparable<SnapshotVersion> {
 
-    public static final Comparator<SnapshotVersion> COMPARATOR = Comparator.nullsFirst(Comparator
-            .comparing(SnapshotVersion::getSnapshotDate)
-            .thenComparing(SnapshotVersion::getSnapshotWeekVersion)
+    public static final Comparator<SnapshotVersion> COMPARATOR = Comparator.nullsFirst(
+        Comparator.comparing(SnapshotVersion::getSnapshotDate)
+                  .thenComparing(SnapshotVersion::getSnapshotWeekVersion)
     );
 
     private static final Pattern SNAPSHOT_PATTERN = Pattern.compile("(\\d{2}w\\d{2})([a-z])");
@@ -88,6 +83,7 @@ public class SnapshotVersion implements Comparable<SnapshotVersion> {
      * Retrieve the snapshot date parser.
      * <p>
      * We have to create a new instance of SimpleDateFormat every time as it is not thread safe.
+     *
      * @return The date formatter.
      */
     private static SimpleDateFormat getDateFormat() {
@@ -125,15 +121,15 @@ public class SnapshotVersion implements Comparable<SnapshotVersion> {
             Calendar current = Calendar.getInstance(Locale.US);
             current.setTime(this.snapshotDate);
             this.rawString = String.format("%02dw%02d%s",
-                    current.get(Calendar.YEAR) % 100,
-                    current.get(Calendar.WEEK_OF_YEAR),
-                    (char) ('a' + this.snapshotWeekVersion));
+                current.get(Calendar.YEAR) % 100,
+                current.get(Calendar.WEEK_OF_YEAR),
+                (char) ('a' + this.snapshotWeekVersion));
         }
         return this.rawString;
     }
 
     @Override
-    public int compareTo(SnapshotVersion that) {
+    public int compareTo(@Nonnull SnapshotVersion that) {
         return COMPARATOR.compare(this, that);
     }
 
@@ -146,7 +142,7 @@ public class SnapshotVersion implements Comparable<SnapshotVersion> {
 
         SnapshotVersion other = (SnapshotVersion) obj;
         return Objects.equals(this.snapshotDate, other.getSnapshotDate()) &&
-                this.snapshotWeekVersion == other.getSnapshotWeekVersion();
+            this.snapshotWeekVersion == other.getSnapshotWeekVersion();
     }
 
     @Override

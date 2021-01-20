@@ -27,10 +27,9 @@ package me.lucko.helper.command.argument;
 
 import me.lucko.helper.utils.annotation.NonnullByDefault;
 
-import java.util.Optional;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.Optional;
 
 @NonnullByDefault
 public class SimpleArgument implements Argument {

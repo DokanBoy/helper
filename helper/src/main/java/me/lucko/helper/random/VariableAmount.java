@@ -26,10 +26,9 @@ package me.lucko.helper.random;
 
 import com.flowpowered.math.GenericMath;
 
+import javax.annotation.Nonnull;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
-
-import javax.annotation.Nonnull;
 
 /**
  * Represents a value which may vary randomly.

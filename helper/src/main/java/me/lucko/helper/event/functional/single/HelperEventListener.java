@@ -27,7 +27,6 @@ package me.lucko.helper.event.functional.single;
 
 import me.lucko.helper.Helper;
 import me.lucko.helper.event.SingleSubscription;
-
 import org.bukkit.event.Event;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.HandlerList;
@@ -35,6 +34,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.plugin.EventExecutor;
 import org.bukkit.plugin.Plugin;
 
+import javax.annotation.Nonnull;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -45,8 +45,6 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.function.BiConsumer;
 import java.util.function.BiPredicate;
 import java.util.function.Predicate;
-
-import javax.annotation.Nonnull;
 
 class HelperEventListener<T extends Event> implements SingleSubscription<T>, EventExecutor, Listener {
     private final Class<T> eventClass;

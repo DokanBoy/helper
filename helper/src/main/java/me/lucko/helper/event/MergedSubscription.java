@@ -27,9 +27,8 @@ package me.lucko.helper.event;
 
 import org.bukkit.event.Event;
 
-import java.util.Set;
-
 import javax.annotation.Nonnull;
+import java.util.Set;
 
 /**
  * Represents a subscription to a set of events.

@@ -27,10 +27,9 @@ package me.lucko.helper.menu.scheme;
 
 import me.lucko.helper.menu.Item;
 
-import java.util.Optional;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.Optional;
 
 /**
  * Represents a mapping to be used in a {@link MenuScheme}

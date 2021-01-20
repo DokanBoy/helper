@@ -27,7 +27,6 @@ package me.lucko.helper.profiles;
 
 import com.google.common.collect.Lists;
 import com.google.gson.stream.JsonReader;
-
 import me.lucko.helper.Schedulers;
 import me.lucko.helper.promise.Promise;
 import me.lucko.helper.utils.UndashedUuids;

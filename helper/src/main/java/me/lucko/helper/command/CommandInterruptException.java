@@ -26,7 +26,6 @@
 package me.lucko.helper.command;
 
 import me.lucko.helper.text.Text;
-
 import org.bukkit.command.CommandSender;
 
 import java.util.function.Consumer;

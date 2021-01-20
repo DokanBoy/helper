@@ -27,22 +27,10 @@ package me.lucko.helper.config;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.JsonElement;
-
-import me.lucko.helper.config.typeserializers.BukkitTypeSerializer;
-import me.lucko.helper.config.typeserializers.ColoredStringTypeSerializer;
-import me.lucko.helper.config.typeserializers.GsonTypeSerializer;
-import me.lucko.helper.config.typeserializers.HelperTypeSerializer;
-import me.lucko.helper.config.typeserializers.JsonTreeTypeSerializer;
-import me.lucko.helper.config.typeserializers.Text3TypeSerializer;
-import me.lucko.helper.config.typeserializers.TextTypeSerializer;
+import me.lucko.helper.config.typeserializers.*;
 import me.lucko.helper.datatree.DataTree;
 import me.lucko.helper.gson.GsonSerializable;
-
-import net.kyori.text.Component;
-
-import org.bukkit.configuration.serialization.ConfigurationSerializable;
-import org.yaml.snakeyaml.DumperOptions;
-
+import net.kyori.adventure.serializer.configurate3.ConfigurateComponentSerializer;
 import ninja.leaping.configurate.ConfigurationNode;
 import ninja.leaping.configurate.commented.CommentedConfigurationNode;
 import ninja.leaping.configurate.gson.GsonConfigurationLoader;
@@ -51,20 +39,21 @@ import ninja.leaping.configurate.loader.ConfigurationLoader;
 import ninja.leaping.configurate.objectmapping.ObjectMapper;
 import ninja.leaping.configurate.objectmapping.ObjectMappingException;
 import ninja.leaping.configurate.objectmapping.serialize.TypeSerializerCollection;
-import ninja.leaping.configurate.objectmapping.serialize.TypeSerializers;
 import ninja.leaping.configurate.yaml.YAMLConfigurationLoader;
+import org.bukkit.configuration.serialization.ConfigurationSerializable;
+import org.yaml.snakeyaml.DumperOptions;
 
+import javax.annotation.Nonnull;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-import javax.annotation.Nonnull;
-
 /**
  * Misc utilities for working with Configurate
  */
+@SuppressWarnings("UnstableApiUsage")
 public abstract class ConfigFactory<N extends ConfigurationNode, L extends ConfigurationLoader<N>> {
 
     private static final ConfigFactory<ConfigurationNode, YAMLConfigurationLoader> YAML = new ConfigFactory<ConfigurationNode, YAMLConfigurationLoader>() {
@@ -117,10 +106,9 @@ public abstract class ConfigFactory<N extends ConfigurationNode, L extends Confi
         helperSerializers.register(TypeToken.of(ConfigurationSerializable.class), BukkitTypeSerializer.INSTANCE);
         helperSerializers.register(TypeToken.of(DataTree.class), JsonTreeTypeSerializer.INSTANCE);
         helperSerializers.register(TypeToken.of(String.class), ColoredStringTypeSerializer.INSTANCE);
-        helperSerializers.register(TypeToken.of(me.lucko.helper.text.Component.class), TextTypeSerializer.INSTANCE);
-        helperSerializers.register(TypeToken.of(Component.class), Text3TypeSerializer.INSTANCE);
 
-        TYPE_SERIALIZERS = helperSerializers.newChild();
+        TYPE_SERIALIZERS = ConfigurateComponentSerializer.configurate().addSerializersTo(helperSerializers);
+        //TYPE_SERIALIZERS = helperSerializers.newChild();
     }
 
     @Nonnull

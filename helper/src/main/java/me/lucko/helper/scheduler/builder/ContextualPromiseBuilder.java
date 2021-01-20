@@ -27,10 +27,9 @@ package me.lucko.helper.scheduler.builder;
 
 import me.lucko.helper.promise.Promise;
 
+import javax.annotation.Nonnull;
 import java.util.concurrent.Callable;
 import java.util.function.Supplier;
-
-import javax.annotation.Nonnull;
 
 /**
  * Builds instances of {@link Promise}, often combining parameters with

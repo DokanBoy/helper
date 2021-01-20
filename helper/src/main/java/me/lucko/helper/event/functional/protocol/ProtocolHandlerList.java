@@ -26,16 +26,14 @@
 package me.lucko.helper.event.functional.protocol;
 
 import com.comphenix.protocol.events.PacketEvent;
-
 import me.lucko.helper.event.ProtocolSubscription;
 import me.lucko.helper.event.functional.FunctionalHandlerList;
 import me.lucko.helper.utils.Delegates;
 
+import javax.annotation.Nonnull;
 import java.util.Objects;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
-
-import javax.annotation.Nonnull;
 
 public interface ProtocolHandlerList extends FunctionalHandlerList<PacketEvent, ProtocolSubscription> {
 

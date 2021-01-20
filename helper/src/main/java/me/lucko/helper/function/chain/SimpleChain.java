@@ -27,14 +27,13 @@ package me.lucko.helper.function.chain;
 
 import me.lucko.helper.utils.annotation.NonnullByDefault;
 
+import javax.annotation.Nullable;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
-
-import javax.annotation.Nullable;
 
 @NonnullByDefault
 class SimpleChain<T> implements Chain<T> {

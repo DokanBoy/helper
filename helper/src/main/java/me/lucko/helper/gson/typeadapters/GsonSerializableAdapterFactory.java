@@ -32,7 +32,6 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-
 import me.lucko.helper.gson.GsonProvider;
 import me.lucko.helper.gson.GsonSerializable;
 

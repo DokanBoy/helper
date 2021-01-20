@@ -30,7 +30,6 @@ import me.lucko.helper.command.context.ImmutableCommandContext;
 import me.lucko.helper.internal.LoaderUtils;
 import me.lucko.helper.utils.CommandMapUtil;
 import me.lucko.helper.utils.annotation.NonnullByDefault;
-
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 

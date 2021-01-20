@@ -26,14 +26,12 @@
 package me.lucko.helper.cooldown;
 
 import com.google.gson.JsonElement;
-
 import me.lucko.helper.gson.JsonBuilder;
 import me.lucko.helper.utils.annotation.NonnullByDefault;
 
+import javax.annotation.Nonnull;
 import java.util.OptionalLong;
 import java.util.concurrent.TimeUnit;
-
-import javax.annotation.Nonnull;
 
 @NonnullByDefault
 class CooldownImpl implements Cooldown {

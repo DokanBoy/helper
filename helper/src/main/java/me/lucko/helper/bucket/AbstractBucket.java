@@ -26,18 +26,12 @@
 package me.lucko.helper.bucket;
 
 import com.google.common.collect.ImmutableList;
-
 import me.lucko.helper.bucket.partitioning.PartitioningStrategy;
 import me.lucko.helper.utils.ImmutableCollectors;
 
-import java.util.AbstractSet;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
-import java.util.function.Consumer;
-
 import javax.annotation.Nonnull;
+import java.util.*;
+import java.util.function.Consumer;
 
 /**
  * An abstract implementation of {@link Bucket}.

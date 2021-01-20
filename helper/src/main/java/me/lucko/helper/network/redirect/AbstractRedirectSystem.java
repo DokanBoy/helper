@@ -26,35 +26,22 @@
 package me.lucko.helper.network.redirect;
 
 import com.google.common.collect.ImmutableMap;
-
 import me.lucko.helper.Events;
 import me.lucko.helper.event.SingleSubscription;
 import me.lucko.helper.messaging.InstanceData;
 import me.lucko.helper.messaging.Messenger;
-import me.lucko.helper.messaging.conversation.ConversationChannel;
-import me.lucko.helper.messaging.conversation.ConversationChannelAgent;
-import me.lucko.helper.messaging.conversation.ConversationMessage;
-import me.lucko.helper.messaging.conversation.ConversationReply;
-import me.lucko.helper.messaging.conversation.ConversationReplyListener;
+import me.lucko.helper.messaging.conversation.*;
 import me.lucko.helper.profiles.Profile;
 import me.lucko.helper.promise.Promise;
-import me.lucko.helper.text3.Text;
-
+import me.lucko.helper.text.Text;
 import net.jodah.expiringmap.ExpirationPolicy;
 import net.jodah.expiringmap.ExpiringMap;
-
 import org.bukkit.event.player.AsyncPlayerPreLoginEvent;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.UUID;
+import javax.annotation.Nonnull;
+import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.TimeUnit;
-
-import javax.annotation.Nonnull;
 
 public class AbstractRedirectSystem implements RedirectSystem {
     private final InstanceData instanceData;

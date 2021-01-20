@@ -26,7 +26,6 @@
 package me.lucko.helper.metadata;
 
 import com.google.common.reflect.TypeToken;
-
 import me.lucko.helper.utils.annotation.NonnullByDefault;
 
 import java.util.Objects;

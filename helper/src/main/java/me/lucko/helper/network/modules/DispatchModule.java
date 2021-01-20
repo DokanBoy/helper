@@ -37,16 +37,14 @@ import me.lucko.helper.messaging.conversation.ConversationReplyListener;
 import me.lucko.helper.terminable.TerminableConsumer;
 import me.lucko.helper.terminable.module.TerminableModule;
 import me.lucko.helper.utils.Players;
-
 import org.bukkit.command.CommandException;
 import org.bukkit.entity.Player;
 
+import javax.annotation.Nonnull;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
-
-import javax.annotation.Nonnull;
 
 public class DispatchModule implements TerminableModule {
     private final Messenger messenger;

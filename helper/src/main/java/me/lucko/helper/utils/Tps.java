@@ -27,18 +27,15 @@ package me.lucko.helper.utils;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-
 import me.lucko.helper.gson.GsonSerializable;
 import me.lucko.helper.gson.JsonBuilder;
-
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 
+import javax.annotation.Nonnull;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.function.Supplier;
-
-import javax.annotation.Nonnull;
 
 /**
  * Encapsulates the servers "ticks per second" (TPS) reading.

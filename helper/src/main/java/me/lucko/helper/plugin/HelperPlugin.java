@@ -26,19 +26,16 @@
 package me.lucko.helper.plugin;
 
 import me.lucko.helper.terminable.TerminableConsumer;
-
+import ninja.leaping.configurate.ConfigurationNode;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.ServicePriority;
 
-import ninja.leaping.configurate.ConfigurationNode;
-
-import java.io.File;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.io.File;
 
 public interface HelperPlugin extends Plugin, TerminableConsumer {
 
@@ -48,7 +45,7 @@ public interface HelperPlugin extends Plugin, TerminableConsumer {
      * <p>{@link me.lucko.helper.Events} should be used instead of this method in most cases.</p>
      *
      * @param listener the listener to register
-     * @param <T> the listener class type
+     * @param <T>      the listener class type
      * @return the listener
      */
     @Nonnull
@@ -59,7 +56,7 @@ public interface HelperPlugin extends Plugin, TerminableConsumer {
      *
      * @param command the command instance
      * @param aliases the command aliases
-     * @param <T> the command executor class type
+     * @param <T>     the command executor class type
      * @return the command executor
      */
     @Nonnull
@@ -70,12 +67,12 @@ public interface HelperPlugin extends Plugin, TerminableConsumer {
     /**
      * Registers a CommandExecutor with the server
      *
-     * @param command the command instance
-     * @param permission the command permission
+     * @param command           the command instance
+     * @param permission        the command permission
      * @param permissionMessage the message sent when the sender doesn't the required permission
-     * @param description the command description
-     * @param aliases the command aliases
-     * @param <T> the command executor class type
+     * @param description       the command description
+     * @param aliases           the command aliases
+     * @param <T>               the command executor class type
      * @return the command executor
      */
     @Nonnull
@@ -85,7 +82,7 @@ public interface HelperPlugin extends Plugin, TerminableConsumer {
      * Gets a service provided by the ServiceManager
      *
      * @param service the service class
-     * @param <T> the class type
+     * @param <T>     the class type
      * @return the service
      */
     @Nonnull
@@ -94,10 +91,10 @@ public interface HelperPlugin extends Plugin, TerminableConsumer {
     /**
      * Provides a service to the ServiceManager, bound to this plugin
      *
-     * @param clazz the service class
+     * @param clazz    the service class
      * @param instance the instance
      * @param priority the priority to register the service at
-     * @param <T> the service class type
+     * @param <T>      the service class type
      * @return the instance
      */
     @Nonnull
@@ -106,9 +103,9 @@ public interface HelperPlugin extends Plugin, TerminableConsumer {
     /**
      * Provides a service to the ServiceManager, bound to this plugin at {@link ServicePriority#Normal}.
      *
-     * @param clazz the service class
+     * @param clazz    the service class
      * @param instance the instance
-     * @param <T> the service class type
+     * @param <T>      the service class type
      * @return the instance
      */
     @Nonnull
@@ -125,9 +122,9 @@ public interface HelperPlugin extends Plugin, TerminableConsumer {
     /**
      * Gets a plugin instance for the given plugin name
      *
-     * @param name the name of the plugin
+     * @param name        the name of the plugin
      * @param pluginClass the main plugin class
-     * @param <T> the main class type
+     * @param <T>         the main class type
      * @return the plugin
      */
     @Nullable
@@ -169,9 +166,9 @@ public interface HelperPlugin extends Plugin, TerminableConsumer {
     /**
      * Populates a config object.
      *
-     * @param file the name of the file
+     * @param file         the name of the file
      * @param configObject the config object
-     * @param <T> the config object type
+     * @param <T>          the config object type
      */
     @Nonnull
     <T> T setupConfig(@Nonnull String file, @Nonnull T configObject);

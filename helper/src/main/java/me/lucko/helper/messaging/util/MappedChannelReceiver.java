@@ -27,19 +27,17 @@ package me.lucko.helper.messaging.util;
 
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
-
 import me.lucko.helper.messaging.Channel;
 import me.lucko.helper.messaging.ChannelAgent;
 import me.lucko.helper.terminable.Terminable;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 /**
  * Creates a subscription to a channel, and maps received values to a calculated key.

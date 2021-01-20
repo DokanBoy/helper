@@ -27,9 +27,8 @@ package me.lucko.helper.messaging.conversation;
 
 import me.lucko.helper.terminable.Terminable;
 
-import java.util.Set;
-
 import javax.annotation.Nonnull;
+import java.util.Set;
 
 /**
  * Represents an agent for interacting with a {@link ConversationChannel}s message streams.

@@ -28,23 +28,17 @@ package me.lucko.helper.event.functional.protocol;
 import com.comphenix.protocol.PacketType;
 import com.comphenix.protocol.events.PacketAdapter;
 import com.comphenix.protocol.events.PacketEvent;
-
 import me.lucko.helper.event.ProtocolSubscription;
 import me.lucko.helper.internal.LoaderUtils;
 import me.lucko.helper.protocol.Protocol;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Set;
+import javax.annotation.Nonnull;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.function.BiConsumer;
 import java.util.function.BiPredicate;
 import java.util.function.Predicate;
-
-import javax.annotation.Nonnull;
 
 class HelperProtocolListener extends PacketAdapter implements ProtocolSubscription {
     private final Set<PacketType> types;

@@ -27,9 +27,8 @@ package me.lucko.helper.menu.scheme;
 
 import me.lucko.helper.menu.Item;
 
-import java.util.Optional;
-
 import javax.annotation.Nonnull;
+import java.util.Optional;
 
 /**
  * An empty menu scheme.

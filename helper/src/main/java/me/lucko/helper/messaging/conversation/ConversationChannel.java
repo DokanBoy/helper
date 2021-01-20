@@ -29,9 +29,8 @@ import me.lucko.helper.messaging.Channel;
 import me.lucko.helper.promise.Promise;
 import me.lucko.helper.terminable.Terminable;
 
-import java.util.concurrent.TimeUnit;
-
 import javax.annotation.Nonnull;
+import java.util.concurrent.TimeUnit;
 
 /**
  * An extension of {@link Channel} providing an abstraction for two-way "conversations".

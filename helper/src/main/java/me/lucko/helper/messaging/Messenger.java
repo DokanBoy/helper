@@ -26,14 +26,12 @@
 package me.lucko.helper.messaging;
 
 import com.google.common.reflect.TypeToken;
-
 import me.lucko.helper.messaging.conversation.ConversationChannel;
 import me.lucko.helper.messaging.conversation.ConversationMessage;
 import me.lucko.helper.messaging.conversation.SimpleConversationChannel;
 
-import java.util.Objects;
-
 import javax.annotation.Nonnull;
+import java.util.Objects;
 
 /**
  * Represents an object which manages messaging {@link Channel}s.

@@ -27,9 +27,8 @@ package me.lucko.helper.random;
 
 import com.google.common.base.Preconditions;
 
-import java.util.Objects;
-
 import javax.annotation.Nonnull;
+import java.util.Objects;
 
 /**
  * Represents a {@link Weighted} object.

@@ -25,21 +25,9 @@
 
 package me.lucko.helper.serialize;
 
-import com.flowpowered.math.vector.Vector2d;
-import com.flowpowered.math.vector.Vector2f;
-import com.flowpowered.math.vector.Vector2i;
-import com.flowpowered.math.vector.Vector2l;
-import com.flowpowered.math.vector.Vector3d;
-import com.flowpowered.math.vector.Vector3f;
-import com.flowpowered.math.vector.Vector3i;
-import com.flowpowered.math.vector.Vector3l;
-import com.flowpowered.math.vector.Vector4d;
-import com.flowpowered.math.vector.Vector4f;
-import com.flowpowered.math.vector.Vector4i;
-import com.flowpowered.math.vector.Vector4l;
+import com.flowpowered.math.vector.*;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-
 import me.lucko.helper.gson.JsonBuilder;
 
 /**

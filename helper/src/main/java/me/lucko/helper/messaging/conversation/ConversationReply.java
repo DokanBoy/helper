@@ -27,10 +27,9 @@ package me.lucko.helper.messaging.conversation;
 
 import me.lucko.helper.promise.Promise;
 
+import javax.annotation.Nonnull;
 import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
-
-import javax.annotation.Nonnull;
 
 /**
  * Encapsulates the reply to a incoming message in a {@link ConversationChannel}.

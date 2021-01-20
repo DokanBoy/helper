@@ -26,7 +26,6 @@
 package me.lucko.helper.menu.paginated;
 
 import com.google.common.collect.ImmutableList;
-
 import com.google.common.collect.Lists;
 import me.lucko.helper.item.ItemStackBuilder;
 import me.lucko.helper.menu.Gui;
@@ -34,7 +33,6 @@ import me.lucko.helper.menu.Item;
 import me.lucko.helper.menu.Slot;
 import me.lucko.helper.menu.scheme.MenuScheme;
 import me.lucko.helper.utils.annotation.NonnullByDefault;
-
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 

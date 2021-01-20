@@ -27,9 +27,8 @@ package me.lucko.helper.hologram.individual;
 
 import me.lucko.helper.serialize.Position;
 
-import java.util.List;
-
 import javax.annotation.Nonnull;
+import java.util.List;
 
 /**
  * A object which can create {@link IndividualHologram}s.

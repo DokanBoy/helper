@@ -26,26 +26,23 @@
 package me.lucko.helper.metadata;
 
 import com.google.common.collect.ImmutableMap;
-
 import me.lucko.helper.metadata.type.BlockMetadataRegistry;
 import me.lucko.helper.metadata.type.EntityMetadataRegistry;
 import me.lucko.helper.metadata.type.PlayerMetadataRegistry;
 import me.lucko.helper.metadata.type.WorldMetadataRegistry;
 import me.lucko.helper.serialize.BlockPosition;
 import me.lucko.helper.utils.Players;
-
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 
+import javax.annotation.Nonnull;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.UUID;
-
-import javax.annotation.Nonnull;
 
 /**
  * The Metadata registries provided by helper.

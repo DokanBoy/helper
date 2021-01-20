@@ -27,11 +27,10 @@ package me.lucko.helper.event.functional;
 
 import me.lucko.helper.utils.Log;
 
+import javax.annotation.Nonnull;
 import java.util.concurrent.TimeUnit;
 import java.util.function.BiConsumer;
 import java.util.function.Predicate;
-
-import javax.annotation.Nonnull;
 
 /**
  * Abstract {@link me.lucko.helper.event.Subscription} builder.

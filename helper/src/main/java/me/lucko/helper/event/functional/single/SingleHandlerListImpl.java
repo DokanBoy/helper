@@ -27,15 +27,13 @@ package me.lucko.helper.event.functional.single;
 
 import me.lucko.helper.event.SingleSubscription;
 import me.lucko.helper.internal.LoaderUtils;
-
 import org.bukkit.event.Event;
 
+import javax.annotation.Nonnull;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.BiConsumer;
-
-import javax.annotation.Nonnull;
 
 class SingleHandlerListImpl<T extends Event> implements SingleHandlerList<T> {
     private final SingleSubscriptionBuilderImpl<T> builder;

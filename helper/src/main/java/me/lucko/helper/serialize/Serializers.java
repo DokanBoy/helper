@@ -28,9 +28,7 @@ package me.lucko.helper.serialize;
 import com.google.common.base.Preconditions;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonPrimitive;
-
 import me.lucko.helper.gson.JsonBuilder;
-
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 

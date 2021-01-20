@@ -27,11 +27,10 @@ package me.lucko.helper.profiles;
 
 import org.bukkit.entity.HumanEntity;
 
-import java.util.Optional;
-import java.util.UUID;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.Optional;
+import java.util.UUID;
 
 /**
  * Represents a Player's profile

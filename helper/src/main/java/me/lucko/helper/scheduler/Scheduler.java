@@ -4,14 +4,13 @@ import me.lucko.helper.promise.Promise;
 import me.lucko.helper.promise.ThreadContext;
 import me.lucko.helper.utils.Delegates;
 
+import javax.annotation.Nonnull;
 import java.util.Objects;
 import java.util.concurrent.Callable;
 import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
-
-import javax.annotation.Nonnull;
 
 /**
  * Utility for scheduling tasks

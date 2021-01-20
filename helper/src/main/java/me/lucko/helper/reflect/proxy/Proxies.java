@@ -26,11 +26,10 @@ package me.lucko.helper.reflect.proxy;
 
 import com.google.common.collect.Lists;
 
+import javax.annotation.Nonnull;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
 import java.util.List;
-
-import javax.annotation.Nonnull;
 
 /**
  * A collection of utilities for working with proxies.
@@ -111,7 +110,7 @@ public final class Proxies {
      */
     @Nonnull
     public static Object create(@Nonnull ClassLoader loader, @Nonnull List<Class<?>> interfaces, @Nonnull InvocationHandler handler) {
-        return create(loader, interfaces.toArray(new Class<?>[interfaces.size()]), handler);
+        return create(loader, interfaces.toArray(new Class<?>[0]), handler);
     }
 
     /**

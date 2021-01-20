@@ -28,14 +28,12 @@ package me.lucko.helper.event.functional.single;
 import me.lucko.helper.event.SingleSubscription;
 import me.lucko.helper.event.functional.FunctionalHandlerList;
 import me.lucko.helper.utils.Delegates;
-
 import org.bukkit.event.Event;
 
+import javax.annotation.Nonnull;
 import java.util.Objects;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
-
-import javax.annotation.Nonnull;
 
 public interface SingleHandlerList<T extends Event> extends FunctionalHandlerList<T, SingleSubscription<T>> {
 

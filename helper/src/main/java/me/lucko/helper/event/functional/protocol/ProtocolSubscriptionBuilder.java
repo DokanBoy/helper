@@ -30,20 +30,18 @@ import com.comphenix.protocol.events.ListenerPriority;
 import com.comphenix.protocol.events.PacketEvent;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableSet;
-
 import me.lucko.helper.event.ProtocolSubscription;
 import me.lucko.helper.event.functional.ExpiryTestStage;
 import me.lucko.helper.event.functional.SubscriptionBuilder;
 import me.lucko.helper.utils.Delegates;
 
+import javax.annotation.Nonnull;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import java.util.function.BiConsumer;
 import java.util.function.BiPredicate;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
-
-import javax.annotation.Nonnull;
 
 /**
  * Functional builder for {@link ProtocolSubscription}s.

@@ -26,10 +26,8 @@
 package me.lucko.helper.command.context;
 
 import com.google.common.collect.ImmutableList;
-
 import me.lucko.helper.command.argument.Argument;
 import me.lucko.helper.command.argument.SimpleArgument;
-
 import org.bukkit.command.CommandSender;
 
 import javax.annotation.Nonnull;

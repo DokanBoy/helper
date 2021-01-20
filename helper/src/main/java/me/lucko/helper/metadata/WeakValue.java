@@ -25,11 +25,10 @@
 
 package me.lucko.helper.metadata;
 
+import javax.annotation.Nullable;
 import java.lang.ref.WeakReference;
 import java.util.Objects;
 import java.util.function.Supplier;
-
-import javax.annotation.Nullable;
 
 /**
  * Represents a value wrapped in a {@link WeakReference}

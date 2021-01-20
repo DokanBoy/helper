@@ -27,11 +27,10 @@ package me.lucko.helper.gson.converter;
 
 import me.lucko.helper.utils.annotation.NonnullByDefault;
 
+import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-
-import javax.annotation.Nullable;
 
 @NonnullByDefault
 class MutableGsonConverter extends AbstractGsonConverter<HashMap<String, Object>, ArrayList<Object>, HashSet<Object>> {

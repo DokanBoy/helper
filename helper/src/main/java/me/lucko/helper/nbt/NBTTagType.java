@@ -25,21 +25,7 @@
 
 package me.lucko.helper.nbt;
 
-import me.lucko.helper.shadows.nbt.NBTBase;
-import me.lucko.helper.shadows.nbt.NBTNumber;
-import me.lucko.helper.shadows.nbt.NBTTagByte;
-import me.lucko.helper.shadows.nbt.NBTTagByteArray;
-import me.lucko.helper.shadows.nbt.NBTTagCompound;
-import me.lucko.helper.shadows.nbt.NBTTagDouble;
-import me.lucko.helper.shadows.nbt.NBTTagEnd;
-import me.lucko.helper.shadows.nbt.NBTTagFloat;
-import me.lucko.helper.shadows.nbt.NBTTagInt;
-import me.lucko.helper.shadows.nbt.NBTTagIntArray;
-import me.lucko.helper.shadows.nbt.NBTTagList;
-import me.lucko.helper.shadows.nbt.NBTTagLong;
-import me.lucko.helper.shadows.nbt.NBTTagLongArray;
-import me.lucko.helper.shadows.nbt.NBTTagShort;
-import me.lucko.helper.shadows.nbt.NBTTagString;
+import me.lucko.helper.shadows.nbt.*;
 
 /**
  * An enumeration of NBT tag types.

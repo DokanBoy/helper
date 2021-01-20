@@ -27,12 +27,11 @@ package me.lucko.helper.metadata;
 
 import com.google.common.collect.ImmutableMap;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 /**
  * A map which holds {@link MetadataKey}s, and maps them to persistent or transient (expiring / weak) values.

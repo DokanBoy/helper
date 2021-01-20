@@ -26,22 +26,19 @@
 package me.lucko.helper.network.redirect;
 
 import com.google.common.collect.ImmutableMap;
-
 import me.lucko.helper.Services;
 import me.lucko.helper.messaging.InstanceData;
 import me.lucko.helper.messaging.Messenger;
 import me.lucko.helper.profiles.Profile;
 import me.lucko.helper.promise.Promise;
 import me.lucko.helper.terminable.Terminable;
-
 import org.bukkit.entity.Player;
-
-import java.util.Map;
-import java.util.Optional;
-import java.util.function.Supplier;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.Map;
+import java.util.Optional;
+import java.util.function.Supplier;
 
 /**
  * Implements a system for controlled redirects between servers.

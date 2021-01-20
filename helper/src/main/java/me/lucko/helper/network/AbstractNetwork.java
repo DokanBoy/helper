@@ -51,18 +51,11 @@ import net.kyori.event.SimpleEventBus;
 import org.bukkit.Bukkit;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.UUID;
+import javax.annotation.Nonnull;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.TimeUnit;
-
-import javax.annotation.Nonnull;
 
 public class AbstractNetwork implements Network {
     protected final CompositeTerminable compositeTerminable = CompositeTerminable.create();

@@ -27,11 +27,9 @@ package me.lucko.helper.config.typeserializers;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.JsonElement;
-
 import me.lucko.helper.datatree.ConfigurateDataTree;
 import me.lucko.helper.datatree.DataTree;
 import me.lucko.helper.datatree.GsonDataTree;
-
 import ninja.leaping.configurate.ConfigurationNode;
 import ninja.leaping.configurate.objectmapping.ObjectMappingException;
 import ninja.leaping.configurate.objectmapping.serialize.TypeSerializer;

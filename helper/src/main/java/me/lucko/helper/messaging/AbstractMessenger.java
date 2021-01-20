@@ -32,7 +32,6 @@ import com.google.common.cache.LoadingCache;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Maps;
 import com.google.common.reflect.TypeToken;
-
 import me.lucko.helper.Schedulers;
 import me.lucko.helper.messaging.codec.Codec;
 import me.lucko.helper.messaging.codec.GZipCodec;
@@ -41,6 +40,8 @@ import me.lucko.helper.messaging.codec.Message;
 import me.lucko.helper.promise.Promise;
 import me.lucko.helper.utils.annotation.NonnullByDefault;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.util.Base64;
 import java.util.Map;
 import java.util.Objects;
@@ -48,9 +49,6 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 /**
  * An abstract implementation of {@link Messenger}.

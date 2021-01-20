@@ -27,20 +27,17 @@ package me.lucko.helper.command.functional;
 
 import com.google.common.base.Splitter;
 import com.google.common.collect.ImmutableList;
-
 import me.lucko.helper.command.Command;
 import me.lucko.helper.command.context.CommandContext;
 import me.lucko.helper.utils.annotation.NonnullByDefault;
-
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 
+import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.Predicate;
-
-import javax.annotation.Nullable;
 
 @NonnullByDefault
 class FunctionalCommandBuilderImpl<T extends CommandSender> implements FunctionalCommandBuilder<T> {

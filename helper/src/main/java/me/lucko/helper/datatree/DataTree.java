@@ -28,13 +28,11 @@ package me.lucko.helper.datatree;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-
 import ninja.leaping.configurate.ConfigurationNode;
 
+import javax.annotation.Nonnull;
 import java.util.Map;
 import java.util.stream.Stream;
-
-import javax.annotation.Nonnull;
 
 /**
  * An easier way of parsing in-memory data structures.
@@ -47,7 +45,7 @@ import javax.annotation.Nonnull;
  *       "a-string": "some special string",
  *       "a-boolean": true,
  *       "some-numbers": [4, 5, 7]
- *        }
+ *     }
  *   }
  * }
  * </pre>

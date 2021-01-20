@@ -32,10 +32,9 @@ import me.lucko.helper.gson.GsonSerializable;
 import me.lucko.helper.scheduler.Ticks;
 import me.lucko.helper.time.Time;
 
+import javax.annotation.Nonnull;
 import java.util.OptionalLong;
 import java.util.concurrent.TimeUnit;
-
-import javax.annotation.Nonnull;
 
 /**
  * A simple cooldown abstraction

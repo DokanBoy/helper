@@ -25,13 +25,12 @@
 
 package me.lucko.helper.reflect;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.text.SimpleDateFormat;
 import java.util.Comparator;
 import java.util.Locale;
 import java.util.Objects;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 /**
  * Encapsulates a version of Minecraft.
@@ -40,23 +39,23 @@ import javax.annotation.Nullable;
  */
 public final class MinecraftVersion implements Comparable<MinecraftVersion> {
 
-    public static final Comparator<MinecraftVersion> COMPARATOR = Comparator.nullsFirst(Comparator
-            .comparingInt(MinecraftVersion::getMajor)
-            .thenComparingInt(MinecraftVersion::getMinor)
-            .thenComparingInt(MinecraftVersion::getBuild)
-            .thenComparing(Comparator.nullsLast(Comparator.comparing(MinecraftVersion::getDevelopmentStage)))
-            .thenComparing(Comparator.nullsFirst(Comparator.comparing(MinecraftVersion::getSnapshot)))
+    public static final Comparator<MinecraftVersion> COMPARATOR = Comparator.nullsFirst(
+        Comparator.comparingInt(MinecraftVersion::getMajor)
+                  .thenComparingInt(MinecraftVersion::getMinor)
+                  .thenComparingInt(MinecraftVersion::getBuild)
+                  .thenComparing(Comparator.nullsLast(Comparator.comparing(MinecraftVersion::getDevelopmentStage)))
+                  .thenComparing(Comparator.nullsFirst(Comparator.comparing(MinecraftVersion::getSnapshot)))
     );
 
     /**
      * The newest known version of Minecraft
      */
-    private static final String NEWEST_MINECRAFT_VERSION = "1.16.2";
+    private static final String NEWEST_MINECRAFT_VERSION = "1.16.5";
 
     /**
      * The date (with ISO 8601 or YYYY-MM-DD) when the most recent version was released.
      */
-    private static final String MINECRAFT_LAST_RELEASE_DATE = "2020-08-11";
+    private static final String MINECRAFT_LAST_RELEASE_DATE = "2021-01-15";
 
     /**
      * Gets the {@link MinecraftVersion} of the runtime server.
@@ -94,7 +93,7 @@ public final class MinecraftVersion implements Comparable<MinecraftVersion> {
      * Parses a {@link MinecraftVersion} from a version string, in the format
      * <code>major.minor.build</code>, or in the snapshot format.
      *
-     * @param version the version in text form.
+     * @param version       the version in text form.
      * @param parseSnapshot if the implementation should try to parse a snapshot version
      * @throws IllegalArgumentException if unable to parse
      */
@@ -120,7 +119,6 @@ public final class MinecraftVersion implements Comparable<MinecraftVersion> {
 
                 versionComponents[0] = latest.getMajor();
                 versionComponents[1] = latest.getMinor() + (newer ? 1 : -1);
-                versionComponents[2] = 0;
             } catch (Exception e) {
                 throw new IllegalArgumentException("Cannot parse " + parts[0], e);
             }
@@ -165,9 +163,9 @@ public final class MinecraftVersion implements Comparable<MinecraftVersion> {
     /**
      * Construct a version object.
      *
-     * @param major - major version number.
-     * @param minor - minor version number.
-     * @param build - build version number.
+     * @param major       - major version number.
+     * @param minor       - minor version number.
+     * @param build       - build version number.
      * @param development - development stage.
      */
     private MinecraftVersion(int major, int minor, int build, @Nullable String development, @Nullable SnapshotVersion snapshot) {
@@ -245,7 +243,7 @@ public final class MinecraftVersion implements Comparable<MinecraftVersion> {
             return String.format("%s.%s.%s", getMajor(), getMinor(), getBuild());
         } else {
             return String.format("%s.%s.%s-%s%s", getMajor(), getMinor(), getBuild(),
-                    getDevelopmentStage(), isSnapshot() ? this.snapshot : "");
+                getDevelopmentStage(), isSnapshot() ? this.snapshot : "");
         }
     }
 
@@ -314,9 +312,9 @@ public final class MinecraftVersion implements Comparable<MinecraftVersion> {
 
         MinecraftVersion other = (MinecraftVersion) obj;
         return getMajor() == other.getMajor() &&
-                getMinor() == other.getMinor() &&
-                getBuild() == other.getBuild() &&
-                Objects.equals(getDevelopmentStage(), other.getDevelopmentStage());
+            getMinor() == other.getMinor() &&
+            getBuild() == other.getBuild() &&
+            Objects.equals(getDevelopmentStage(), other.getDevelopmentStage());
     }
 
     @Override

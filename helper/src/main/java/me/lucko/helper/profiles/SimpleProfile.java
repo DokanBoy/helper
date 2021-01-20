@@ -25,12 +25,11 @@
 
 package me.lucko.helper.profiles;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.UUID;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 final class SimpleProfile implements Profile {
 

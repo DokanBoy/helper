@@ -29,11 +29,10 @@ import me.lucko.helper.event.MergedSubscription;
 import me.lucko.helper.event.functional.FunctionalHandlerList;
 import me.lucko.helper.utils.Delegates;
 
+import javax.annotation.Nonnull;
 import java.util.Objects;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
-
-import javax.annotation.Nonnull;
 
 public interface MergedHandlerList<T> extends FunctionalHandlerList<T, MergedSubscription<T>> {
 

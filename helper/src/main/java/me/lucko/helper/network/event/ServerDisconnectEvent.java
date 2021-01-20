@@ -25,9 +25,8 @@
 
 package me.lucko.helper.network.event;
 
-import java.util.Objects;
-
 import javax.annotation.Nullable;
+import java.util.Objects;
 
 /**
  * Called when a server disconnects from the network

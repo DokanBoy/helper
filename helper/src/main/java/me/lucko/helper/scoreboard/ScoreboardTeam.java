@@ -26,7 +26,6 @@
 package me.lucko.helper.scoreboard;
 
 import me.lucko.helper.utils.annotation.NonnullByDefault;
-
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 

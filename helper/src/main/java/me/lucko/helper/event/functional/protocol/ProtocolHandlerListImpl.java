@@ -26,15 +26,13 @@
 package me.lucko.helper.event.functional.protocol;
 
 import com.comphenix.protocol.events.PacketEvent;
-
 import me.lucko.helper.event.ProtocolSubscription;
 
+import javax.annotation.Nonnull;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.BiConsumer;
-
-import javax.annotation.Nonnull;
 
 class ProtocolHandlerListImpl implements ProtocolHandlerList {
     private final ProtocolSubscriptionBuilderImpl builder;

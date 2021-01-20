@@ -26,7 +26,6 @@
 package me.lucko.helper.messaging;
 
 import com.google.common.reflect.TypeToken;
-
 import me.lucko.helper.interfaces.TypeAware;
 import me.lucko.helper.messaging.codec.Codec;
 import me.lucko.helper.promise.Promise;

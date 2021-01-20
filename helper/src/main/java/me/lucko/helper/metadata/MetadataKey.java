@@ -26,7 +26,6 @@
 package me.lucko.helper.metadata;
 
 import com.google.common.reflect.TypeToken;
-
 import me.lucko.helper.cooldown.Cooldown;
 import me.lucko.helper.interfaces.TypeAware;
 import me.lucko.helper.utils.annotation.NonnullByDefault;

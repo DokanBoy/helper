@@ -25,10 +25,9 @@
 
 package me.lucko.helper.messaging.conversation;
 
+import javax.annotation.Nonnull;
 import java.util.List;
 import java.util.function.Function;
-
-import javax.annotation.Nonnull;
 
 /**
  * Represents an object listening for replies sent on the conversation channel.

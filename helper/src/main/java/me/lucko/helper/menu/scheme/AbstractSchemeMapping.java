@@ -26,14 +26,12 @@
 package me.lucko.helper.menu.scheme;
 
 import com.google.common.collect.ImmutableMap;
-
 import me.lucko.helper.menu.Item;
-
-import java.util.Map;
-import java.util.Objects;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.Map;
+import java.util.Objects;
 
 /**
  * Implements {@link SchemeMapping} using an immutable map.

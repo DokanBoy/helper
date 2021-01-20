@@ -29,10 +29,10 @@ import com.comphenix.protocol.PacketType;
 import com.comphenix.protocol.events.ListenerPriority;
 import com.comphenix.protocol.events.PacketEvent;
 import com.google.common.collect.ImmutableSet;
-
 import me.lucko.helper.event.ProtocolSubscription;
 import me.lucko.helper.event.functional.ExpiryTestStage;
 
+import javax.annotation.Nonnull;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -40,8 +40,6 @@ import java.util.Set;
 import java.util.function.BiConsumer;
 import java.util.function.BiPredicate;
 import java.util.function.Predicate;
-
-import javax.annotation.Nonnull;
 
 class ProtocolSubscriptionBuilderImpl implements ProtocolSubscriptionBuilder {
     final Set<PacketType> types;

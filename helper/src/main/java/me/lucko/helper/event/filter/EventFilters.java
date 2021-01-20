@@ -27,7 +27,6 @@ package me.lucko.helper.event.filter;
 
 import me.lucko.helper.metadata.Metadata;
 import me.lucko.helper.metadata.MetadataKey;
-
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.entity.EntityEvent;
 import org.bukkit.event.player.AsyncPlayerPreLoginEvent;
@@ -35,9 +34,8 @@ import org.bukkit.event.player.PlayerEvent;
 import org.bukkit.event.player.PlayerLoginEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 
-import java.util.function.Predicate;
-
 import javax.annotation.Nonnull;
+import java.util.function.Predicate;
 
 /**
  * Defines standard event predicates for use in functional event handlers.

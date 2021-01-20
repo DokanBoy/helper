@@ -26,16 +26,14 @@
 package me.lucko.helper.command.functional;
 
 import com.google.common.collect.ImmutableList;
-
 import me.lucko.helper.command.AbstractCommand;
 import me.lucko.helper.command.CommandInterruptException;
 import me.lucko.helper.command.context.CommandContext;
 import me.lucko.helper.utils.annotation.NonnullByDefault;
 
-import java.util.function.Predicate;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.function.Predicate;
 
 @NonnullByDefault
 class FunctionalCommand extends AbstractCommand {

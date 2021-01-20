@@ -27,17 +27,12 @@ package me.lucko.helper.scheduler;
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 
+import javax.annotation.Nonnull;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.WeakHashMap;
-import java.util.concurrent.AbstractExecutorService;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -48,15 +43,15 @@ final class HelperAsyncExecutor extends AbstractExecutorService implements Sched
     private final Set<ScheduledFuture<?>> tasks = Collections.newSetFromMap(new WeakHashMap<>());
 
     HelperAsyncExecutor() {
-        this.taskService = Executors.newCachedThreadPool(new ThreadFactoryBuilder()
-                .setDaemon(true)
-                .setNameFormat("helper-scheduler-%d")
-                .build()
+        this.taskService = Executors.newCachedThreadPool(
+            new ThreadFactoryBuilder().setDaemon(true)
+                                      .setNameFormat("helper-scheduler-%d")
+                                      .build()
         );
-        this.timerExecutionService = Executors.newSingleThreadScheduledExecutor(new ThreadFactoryBuilder()
-                .setDaemon(true)
-                .setNameFormat("helper-scheduler-timer")
-                .build()
+        this.timerExecutionService = Executors.newSingleThreadScheduledExecutor(
+            new ThreadFactoryBuilder().setDaemon(true)
+                                      .setNameFormat("helper-scheduler-timer")
+                                      .build()
         );
     }
 
@@ -76,28 +71,31 @@ final class HelperAsyncExecutor extends AbstractExecutorService implements Sched
     }
 
     @Override
-    public void execute(Runnable runnable) {
+    public void execute(@Nonnull Runnable runnable) {
         this.taskService.execute(HelperExecutors.wrapRunnable(runnable));
     }
 
+    @Nonnull
     @Override
-    public ScheduledFuture<?> schedule(Runnable command, long delay, TimeUnit unit) {
+    public ScheduledFuture<?> schedule(@Nonnull Runnable command, long delay, @Nonnull TimeUnit unit) {
         Runnable delegate = HelperExecutors.wrapRunnable(command);
         return consumeTask(this.timerExecutionService.schedule(() -> this.taskService.execute(delegate), delay, unit));
     }
 
+    @Nonnull
     @Override
-    public <V> ScheduledFuture<V> schedule(Callable<V> callable, long delay, TimeUnit unit) {
+    public <V> ScheduledFuture<V> schedule(@Nonnull Callable<V> callable, long delay, @Nonnull TimeUnit unit) {
         throw new UnsupportedOperationException();
     }
 
+    @Nonnull
     @Override
-    public ScheduledFuture<?> scheduleAtFixedRate(Runnable command, long initialDelay, long period, TimeUnit unit) {
+    public ScheduledFuture<?> scheduleAtFixedRate(@Nonnull Runnable command, long initialDelay, long period, @Nonnull TimeUnit unit) {
         return consumeTask(this.timerExecutionService.scheduleAtFixedRate(new FixedRateWorker(HelperExecutors.wrapRunnable(command)), initialDelay, period, unit));
     }
 
     @Override
-    public ScheduledFuture<?> scheduleWithFixedDelay(Runnable command, long initialDelay, long delay, TimeUnit unit) {
+    public ScheduledFuture<?> scheduleWithFixedDelay(@Nonnull Runnable command, long initialDelay, long delay, @Nonnull TimeUnit unit) {
         return scheduleAtFixedRate(command, initialDelay, delay, unit);
     }
 
@@ -123,7 +121,7 @@ final class HelperAsyncExecutor extends AbstractExecutorService implements Sched
     }
 
     @Override
-    public boolean awaitTermination(long timeout, TimeUnit unit) {
+    public boolean awaitTermination(long timeout, @Nonnull TimeUnit unit) {
         throw new IllegalStateException("Not shutdown");
     }
 

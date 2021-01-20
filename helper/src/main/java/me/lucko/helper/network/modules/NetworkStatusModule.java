@@ -33,7 +33,6 @@ import me.lucko.helper.network.event.ServerDisconnectEvent;
 import me.lucko.helper.terminable.TerminableConsumer;
 import me.lucko.helper.terminable.module.TerminableModule;
 import me.lucko.helper.utils.Players;
-
 import net.kyori.event.EventBus;
 
 import javax.annotation.Nonnull;

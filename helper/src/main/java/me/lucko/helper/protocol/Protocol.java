@@ -30,14 +30,11 @@ import com.comphenix.protocol.ProtocolLibrary;
 import com.comphenix.protocol.ProtocolManager;
 import com.comphenix.protocol.events.ListenerPriority;
 import com.comphenix.protocol.events.PacketContainer;
-
 import me.lucko.helper.event.functional.protocol.ProtocolSubscriptionBuilder;
-
 import org.bukkit.entity.Player;
 
-import java.lang.reflect.InvocationTargetException;
-
 import javax.annotation.Nonnull;
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * Utilities for working with ProtocolLib.

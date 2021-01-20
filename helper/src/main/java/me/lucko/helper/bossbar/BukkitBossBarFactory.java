@@ -26,15 +26,13 @@
 package me.lucko.helper.bossbar;
 
 import me.lucko.helper.text.Text;
-
 import org.bukkit.Server;
 import org.bukkit.boss.BarColor;
 import org.bukkit.boss.BarStyle;
 import org.bukkit.entity.Player;
 
-import java.util.List;
-
 import javax.annotation.Nonnull;
+import java.util.List;
 
 /**
  * Implementation of {@link BossBarFactory} using Bukkit.

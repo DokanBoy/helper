@@ -27,17 +27,14 @@ package me.lucko.helper.messaging.bungee;
 
 import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteArrayDataOutput;
-
 import me.lucko.helper.promise.Promise;
-
 import org.bukkit.entity.Player;
 
+import javax.annotation.Nonnull;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 import java.util.function.Predicate;
-
-import javax.annotation.Nonnull;
 
 /**
  * API interface to encapsulate the BungeeCord Plugin Messaging API.

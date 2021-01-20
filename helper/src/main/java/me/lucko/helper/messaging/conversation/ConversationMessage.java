@@ -27,9 +27,8 @@ package me.lucko.helper.messaging.conversation;
 
 import me.lucko.helper.messaging.codec.Codec;
 
-import java.util.UUID;
-
 import javax.annotation.Nonnull;
+import java.util.UUID;
 
 /**
  * Represents a message sent via a {@link ConversationChannel}.

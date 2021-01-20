@@ -27,7 +27,6 @@ package me.lucko.helper.serialize;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
-
 import me.lucko.helper.gson.GsonProvider;
 
 import java.io.BufferedReader;

@@ -25,9 +25,8 @@
 
 package me.lucko.helper.metadata;
 
-import java.util.function.Supplier;
-
 import javax.annotation.Nonnull;
+import java.util.function.Supplier;
 
 /**
  * An object which represents nothing.

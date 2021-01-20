@@ -25,6 +25,8 @@
 
 package me.lucko.helper.utils;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.util.NoSuchElementException;
 import java.util.Objects;
 import java.util.Optional;
@@ -32,9 +34,6 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 /**
  * A container object which may or may not contain a value.

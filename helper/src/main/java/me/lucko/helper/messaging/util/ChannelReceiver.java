@@ -25,11 +25,10 @@
 
 package me.lucko.helper.messaging.util;
 
+import javax.annotation.Nonnull;
 import java.util.Optional;
 import java.util.OptionalLong;
 import java.util.concurrent.TimeUnit;
-
-import javax.annotation.Nonnull;
 
 /**
  * Receives a message from a channel, sent at a fixed interval.

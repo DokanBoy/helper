@@ -27,13 +27,8 @@ package me.lucko.helper.plugin.ap;
 
 import org.bukkit.plugin.PluginLoadOrder;
 
-import java.lang.annotation.Documented;
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
-
 import javax.annotation.Nonnull;
+import java.lang.annotation.*;
 
 /**
  * Annotation to automatically generate plugin.yml files for helper projects

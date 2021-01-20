@@ -27,11 +27,10 @@ package me.lucko.helper.metadata;
 
 import com.google.common.base.Preconditions;
 
+import javax.annotation.Nullable;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
-
-import javax.annotation.Nullable;
 
 /**
  * Represents a value which will expire a set amount of time after the last access

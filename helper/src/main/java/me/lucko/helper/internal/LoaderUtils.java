@@ -27,17 +27,15 @@ package me.lucko.helper.internal;
 
 import me.lucko.helper.Helper;
 import me.lucko.helper.plugin.HelperPlugin;
-
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import javax.annotation.Nonnull;
 import java.util.Arrays;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
-import javax.annotation.Nonnull;
 
 /**
  * Provides the instance which loaded the helper classes into the server

@@ -27,9 +27,8 @@ package me.lucko.helper.network.redirect;
 
 import me.lucko.helper.profiles.Profile;
 
-import java.util.Map;
-
 import javax.annotation.Nonnull;
+import java.util.Map;
 
 /**
  * Provides default parameters for outgoing {@link RedirectSystem.Request}s.

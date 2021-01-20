@@ -26,7 +26,6 @@
 package me.lucko.helper.network.redirect;
 
 import me.lucko.helper.profiles.Profile;
-
 import org.bukkit.entity.Player;
 
 import javax.annotation.Nonnull;

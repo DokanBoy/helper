@@ -41,10 +41,9 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.player.PlayerJoinEvent;
 
+import javax.annotation.Nonnull;
 import java.time.Instant;
 import java.util.Map;
-
-import javax.annotation.Nonnull;
 
 public class NetworkSummaryModule implements TerminableModule {
     private final Network network;

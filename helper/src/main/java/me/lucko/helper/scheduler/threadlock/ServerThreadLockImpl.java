@@ -27,7 +27,6 @@ package me.lucko.helper.scheduler.threadlock;
 
 import me.lucko.helper.internal.LoaderUtils;
 import me.lucko.helper.promise.ThreadContext;
-
 import org.bukkit.Bukkit;
 
 import java.util.concurrent.CountDownLatch;

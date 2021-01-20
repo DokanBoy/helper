@@ -26,10 +26,8 @@
 package me.lucko.helper.eventbus;
 
 import me.lucko.helper.terminable.Terminable;
-
 import net.kyori.event.EventBus;
 import net.kyori.event.EventSubscriber;
-
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 /**

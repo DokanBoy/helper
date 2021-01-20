@@ -27,13 +27,57 @@ package me.lucko.helper.utils;
 
 import com.google.common.collect.Lists;
 
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 public final class CollectionUtils {
 
     @Deprecated
     public static <T> List<List<T>> divideIterable(Iterable<T> source, int subListSize) {
         return Lists.partition(Lists.newArrayList(source), subListSize);
+    }
+
+    public static boolean isEmpty(Collection<?> collection) {
+        return collection == null || collection.isEmpty();
+    }
+
+    public static boolean isNonEmpty(Collection<?> collection) {
+        return !isEmpty(collection);
+    }
+
+    public static boolean isEmpty(Map<?, ?> map) {
+        return map == null || map.isEmpty();
+    }
+
+    public static boolean isNonEmpty(Map<?, ?> map) {
+        return !isEmpty(map);
+    }
+
+    public static boolean contains(Object[] array, Object objToFind) {
+        if (array == null) return false;
+
+        if (objToFind == null) {
+            for (Object o : array) {
+                if (o == null) return true;
+            }
+        } else {
+            for (Object o : array) {
+                if (objToFind.equals(o)) return true;
+            }
+        }
+
+        return false;
+    }
+
+    public static int size(Collection<?> collection) {
+        if (isEmpty(collection)) return 0;
+        return collection.size();
+    }
+
+    public static int size(Map<?, ?> map) {
+        if (isEmpty(map)) return 0;
+        return map.size();
     }
 
     private CollectionUtils() {

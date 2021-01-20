@@ -26,14 +26,12 @@
 package me.lucko.helper.hologram;
 
 import com.google.gson.JsonElement;
-
 import me.lucko.helper.Services;
 import me.lucko.helper.gson.GsonSerializable;
 import me.lucko.helper.serialize.Position;
 
-import java.util.List;
-
 import javax.annotation.Nonnull;
+import java.util.List;
 
 /**
  * A simple hologram utility.

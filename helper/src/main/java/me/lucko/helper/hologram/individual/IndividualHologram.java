@@ -28,13 +28,11 @@ package me.lucko.helper.hologram.individual;
 import me.lucko.helper.Services;
 import me.lucko.helper.hologram.BaseHologram;
 import me.lucko.helper.serialize.Position;
-
 import org.bukkit.entity.Player;
 
+import javax.annotation.Nonnull;
 import java.util.List;
 import java.util.Set;
-
-import javax.annotation.Nonnull;
 
 public interface IndividualHologram extends BaseHologram {
 

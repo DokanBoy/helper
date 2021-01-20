@@ -27,27 +27,23 @@ package me.lucko.helper.scoreboard;
 
 import com.comphenix.protocol.wrappers.WrappedChatComponent;
 import com.google.common.base.Preconditions;
-
 import me.lucko.helper.Events;
 import me.lucko.helper.plugin.HelperPlugin;
-import me.lucko.helper.text3.Text;
 import me.lucko.helper.utils.Players;
 import me.lucko.helper.utils.annotation.NonnullByDefault;
-
-import net.kyori.text.serializer.gson.GsonComponentSerializer;
-
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.serializer.gson.GsonComponentSerializer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.scoreboard.DisplaySlot;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 /**
  * Implements {@link Scoreboard} using ProtocolLib.
@@ -263,7 +259,7 @@ public class PacketScoreboard implements Scoreboard {
     }
 
     static WrappedChatComponent toComponent(String text) {
-        return WrappedChatComponent.fromJson(GsonComponentSerializer.INSTANCE.serialize(Text.fromLegacy(text)));
+        return WrappedChatComponent.fromJson(GsonComponentSerializer.gson().serialize(Component.text(text)));
     }
 
 }

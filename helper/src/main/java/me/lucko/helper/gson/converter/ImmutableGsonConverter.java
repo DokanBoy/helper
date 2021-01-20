@@ -28,7 +28,6 @@ package me.lucko.helper.gson.converter;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
-
 import me.lucko.helper.utils.annotation.NonnullByDefault;
 
 import javax.annotation.Nullable;

@@ -27,24 +27,17 @@ package me.lucko.helper.event.functional.merged;
 
 import com.google.common.base.Preconditions;
 import com.google.common.reflect.TypeToken;
-
 import me.lucko.helper.event.MergedSubscription;
 import me.lucko.helper.event.functional.ExpiryTestStage;
 import me.lucko.helper.event.functional.SubscriptionBuilder;
 import me.lucko.helper.utils.Delegates;
-
 import org.bukkit.event.Event;
 import org.bukkit.event.EventPriority;
 
+import javax.annotation.Nonnull;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
-import java.util.function.BiConsumer;
-import java.util.function.BiPredicate;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
-
-import javax.annotation.Nonnull;
+import java.util.function.*;
 
 /**
  * Functional builder for {@link MergedSubscription}s.

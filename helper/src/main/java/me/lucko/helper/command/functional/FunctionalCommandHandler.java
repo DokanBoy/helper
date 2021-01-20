@@ -29,7 +29,6 @@ import me.lucko.helper.command.Command;
 import me.lucko.helper.command.CommandInterruptException;
 import me.lucko.helper.command.context.CommandContext;
 import me.lucko.helper.utils.annotation.NonnullByDefault;
-
 import org.bukkit.command.CommandSender;
 
 /**

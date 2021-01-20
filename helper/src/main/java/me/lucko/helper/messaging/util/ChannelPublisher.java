@@ -31,11 +31,10 @@ import me.lucko.helper.promise.ThreadContext;
 import me.lucko.helper.scheduler.Task;
 import me.lucko.helper.terminable.Terminable;
 
+import javax.annotation.Nonnull;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
-
-import javax.annotation.Nonnull;
 
 /**
  * Periodically publishes a message to a channel.

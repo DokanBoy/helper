@@ -30,14 +30,12 @@ import me.lucko.helper.Helper;
 import me.lucko.helper.event.MergedSubscription;
 import me.lucko.helper.terminable.Terminable;
 import me.lucko.helper.utils.annotation.NonnullByDefault;
-
 import org.bukkit.event.server.ServiceEvent;
 import org.bukkit.event.server.ServiceRegisterEvent;
 import org.bukkit.event.server.ServiceUnregisterEvent;
 
-import java.util.Optional;
-
 import javax.annotation.Nullable;
+import java.util.Optional;
 
 /**
  * A wrapper to always provide the latest instance of a service.

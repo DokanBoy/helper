@@ -27,19 +27,13 @@ package me.lucko.helper.datatree;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Maps;
-
 import ninja.leaping.configurate.ConfigurationNode;
 import ninja.leaping.configurate.Types;
 
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Spliterator;
-import java.util.Spliterators;
+import javax.annotation.Nonnull;
+import java.util.*;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
-
-import javax.annotation.Nonnull;
 
 public class ConfigurateDataTree implements DataTree {
     private final ConfigurationNode node;
@@ -61,7 +55,7 @@ public class ConfigurateDataTree implements DataTree {
     @Nonnull
     @Override
     public Stream<Map.Entry<String, ConfigurateDataTree>> asObject() {
-        Preconditions.checkState(this.node.hasMapChildren(), "node does not have map children");
+        Preconditions.checkState(this.node.isMap(), "node does not have map children");
         return this.node.getChildrenMap().entrySet().stream()
                 .map(entry -> Maps.immutableEntry(entry.getKey().toString(), new ConfigurateDataTree(entry.getValue())));
     }
@@ -69,14 +63,14 @@ public class ConfigurateDataTree implements DataTree {
     @Nonnull
     @Override
     public Stream<ConfigurateDataTree> asArray() {
-        Preconditions.checkState(this.node.hasListChildren(), "node does not have list children");
+        Preconditions.checkState(this.node.isList(), "node does not have list children");
         return this.node.getChildrenList().stream().map(ConfigurateDataTree::new);
     }
 
     @Nonnull
     @Override
     public Stream<Map.Entry<Integer, ConfigurateDataTree>> asIndexedArray() {
-        Preconditions.checkState(this.node.hasListChildren(), "node does not have list children");
+        Preconditions.checkState(this.node.isList(), "node does not have list children");
         return StreamSupport.stream(Spliterators.spliteratorUnknownSize(new Iterator<Map.Entry<Integer, ConfigurateDataTree>>() {
             private final Iterator<? extends ConfigurationNode> iterator = ConfigurateDataTree.this.node.getChildrenList().iterator();
             private int index = 0;

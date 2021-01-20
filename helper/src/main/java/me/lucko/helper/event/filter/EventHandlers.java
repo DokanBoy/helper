@@ -27,9 +27,8 @@ package me.lucko.helper.event.filter;
 
 import org.bukkit.event.Cancellable;
 
-import java.util.function.Consumer;
-
 import javax.annotation.Nonnull;
+import java.util.function.Consumer;
 
 /**
  * Defines standard event predicates for use in functional event handlers.

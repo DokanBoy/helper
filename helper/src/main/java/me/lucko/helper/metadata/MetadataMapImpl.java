@@ -28,16 +28,11 @@ package me.lucko.helper.metadata;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Optional;
+import javax.annotation.Nonnull;
+import java.util.*;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
-
-import javax.annotation.Nonnull;
 
 final class MetadataMapImpl implements MetadataMap {
     private final Map<MetadataKey<?>, Object> map = new HashMap<>();

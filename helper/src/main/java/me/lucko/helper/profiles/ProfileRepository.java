@@ -27,14 +27,8 @@ package me.lucko.helper.profiles;
 
 import me.lucko.helper.promise.Promise;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.UUID;
-
 import javax.annotation.Nonnull;
+import java.util.*;
 
 /**
  * A repository of profiles, which can get or lookup {@link Profile} instances

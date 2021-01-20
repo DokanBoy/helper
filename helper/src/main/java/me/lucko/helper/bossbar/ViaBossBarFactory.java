@@ -28,18 +28,15 @@ package me.lucko.helper.bossbar;
 import me.lucko.helper.text.Text;
 import me.lucko.helper.utils.ImmutableCollectors;
 import me.lucko.helper.utils.Players;
-
 import org.bukkit.entity.Player;
-
 import us.myles.ViaVersion.api.Via;
 import us.myles.ViaVersion.api.boss.BossColor;
 import us.myles.ViaVersion.api.boss.BossStyle;
 
+import javax.annotation.Nonnull;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
-
-import javax.annotation.Nonnull;
 
 /**
  * Implementation of {@link BossBarFactory} using ViaVersion.

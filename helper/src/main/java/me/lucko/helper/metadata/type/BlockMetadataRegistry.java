@@ -29,13 +29,11 @@ import me.lucko.helper.metadata.MetadataKey;
 import me.lucko.helper.metadata.MetadataMap;
 import me.lucko.helper.metadata.MetadataRegistry;
 import me.lucko.helper.serialize.BlockPosition;
-
 import org.bukkit.block.Block;
 
+import javax.annotation.Nonnull;
 import java.util.Map;
 import java.util.Optional;
-
-import javax.annotation.Nonnull;
 
 /**
  * A registry which provides and stores {@link MetadataMap}s for {@link Block}s.

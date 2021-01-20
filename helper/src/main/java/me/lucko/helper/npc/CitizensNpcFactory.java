@@ -32,7 +32,6 @@ import me.lucko.helper.metadata.Metadata;
 import me.lucko.helper.metadata.MetadataKey;
 import me.lucko.helper.metadata.MetadataMap;
 import me.lucko.helper.terminable.composite.CompositeTerminable;
-
 import net.citizensnpcs.api.CitizensAPI;
 import net.citizensnpcs.api.event.NPCClickEvent;
 import net.citizensnpcs.api.event.NPCLeftClickEvent;
@@ -44,7 +43,6 @@ import net.citizensnpcs.api.trait.Trait;
 import net.citizensnpcs.api.trait.TraitInfo;
 import net.citizensnpcs.npc.skin.SkinnableEntity;
 import net.citizensnpcs.trait.LookClose;
-
 import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
@@ -55,13 +53,12 @@ import org.bukkit.event.player.PlayerFishEvent;
 import org.bukkit.event.player.PlayerTeleportEvent;
 import org.bukkit.event.server.PluginEnableEvent;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.util.Objects;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 /**
  * Implementation of {@link NpcFactory} using Citizens.
@@ -124,7 +121,7 @@ public class CitizensNpcFactory implements NpcFactory {
             if (processMetadata(clicker)) {
                 return;
             }
-            npc.getTrait(ClickableTrait.class).onClick(clicker);
+            npc.getOrAddTrait(ClickableTrait.class).onClick(clicker);
         }
     }
 
@@ -137,7 +134,7 @@ public class CitizensNpcFactory implements NpcFactory {
         for (NPC npc : this.npcRegistry) {
             if (!npc.isSpawned() || !npc.hasTrait(ClickableTrait.class)) continue;
 
-            Npc helperNpc = npc.getTrait(ClickableTrait.class).npc;
+            Npc helperNpc = npc.getOrAddTrait(ClickableTrait.class).npc;
 
             // ensure npcs stay in the same position
             Location loc = npc.getEntity().getLocation();
@@ -225,7 +222,7 @@ public class CitizensNpcFactory implements NpcFactory {
         @Override
         public void onSpawn() {
             super.onSpawn();
-            ensureLook(getNPC().getTrait(LookClose.class));
+            ensureLook(getNPC().getOrAddTrait(LookClose.class));
         }
 
         private void ensureLook(LookClose lookTraitInstance) {

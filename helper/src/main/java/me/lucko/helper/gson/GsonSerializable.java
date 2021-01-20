@@ -27,12 +27,11 @@ package me.lucko.helper.gson;
 
 import com.google.gson.JsonElement;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 /**
  * An object which can be serialized to JSON.

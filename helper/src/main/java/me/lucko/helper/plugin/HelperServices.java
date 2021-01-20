@@ -40,7 +40,6 @@ import me.lucko.helper.scoreboard.PacketScoreboardProvider;
 import me.lucko.helper.scoreboard.ScoreboardProvider;
 import me.lucko.helper.signprompt.PacketSignPromptFactory;
 import me.lucko.helper.signprompt.SignPromptFactory;
-
 import org.bukkit.plugin.ServicePriority;
 
 final class HelperServices {

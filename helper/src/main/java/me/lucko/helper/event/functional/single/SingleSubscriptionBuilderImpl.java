@@ -27,18 +27,16 @@ package me.lucko.helper.event.functional.single;
 
 import me.lucko.helper.event.SingleSubscription;
 import me.lucko.helper.event.functional.ExpiryTestStage;
-
 import org.bukkit.event.Event;
 import org.bukkit.event.EventPriority;
 
+import javax.annotation.Nonnull;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.BiConsumer;
 import java.util.function.BiPredicate;
 import java.util.function.Predicate;
-
-import javax.annotation.Nonnull;
 
 class SingleSubscriptionBuilderImpl<T extends Event> implements SingleSubscriptionBuilder<T> {
     final Class<T> eventClass;

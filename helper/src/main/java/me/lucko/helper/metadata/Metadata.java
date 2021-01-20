@@ -32,7 +32,6 @@ import me.lucko.helper.metadata.type.EntityMetadataRegistry;
 import me.lucko.helper.metadata.type.PlayerMetadataRegistry;
 import me.lucko.helper.metadata.type.WorldMetadataRegistry;
 import me.lucko.helper.serialize.BlockPosition;
-
 import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
@@ -40,14 +39,13 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.player.PlayerQuitEvent;
 
+import javax.annotation.Nonnull;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
-
-import javax.annotation.Nonnull;
 
 /**
  * Provides access to {@link MetadataRegistry} instances bound to players, entities, blocks and worlds.

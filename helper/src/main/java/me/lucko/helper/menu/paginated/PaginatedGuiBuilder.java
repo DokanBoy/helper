@@ -26,13 +26,11 @@
 package me.lucko.helper.menu.paginated;
 
 import com.google.common.collect.ImmutableList;
-
 import me.lucko.helper.item.ItemStackBuilder;
 import me.lucko.helper.menu.Item;
 import me.lucko.helper.menu.scheme.MenuScheme;
 import me.lucko.helper.menu.scheme.StandardSchemeMappings;
 import me.lucko.helper.utils.annotation.NonnullByDefault;
-
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;

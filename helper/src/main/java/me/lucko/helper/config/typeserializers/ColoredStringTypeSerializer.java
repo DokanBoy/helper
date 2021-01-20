@@ -26,9 +26,7 @@
 package me.lucko.helper.config.typeserializers;
 
 import com.google.common.reflect.TypeToken;
-
 import me.lucko.helper.text.Text;
-
 import ninja.leaping.configurate.ConfigurationNode;
 import ninja.leaping.configurate.objectmapping.serialize.TypeSerializer;
 
