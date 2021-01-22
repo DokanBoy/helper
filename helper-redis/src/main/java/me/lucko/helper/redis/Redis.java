@@ -27,7 +27,6 @@ package me.lucko.helper.redis;
 
 import me.lucko.helper.messaging.Messenger;
 import me.lucko.helper.terminable.Terminable;
-
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 

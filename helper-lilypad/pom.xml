@@ -12,7 +12,7 @@
 
     <artifactId>helper-lilypad</artifactId>
     <packaging>jar</packaging>
-    <version>3.0.0</version>
+    <version>3.0.1</version>
 
     <name>helper-lilypad</name>
     <description>Implements the helper Messaging system using LilyPad.</description>
@@ -95,9 +95,11 @@
             <version>[5.5.0,6.0.0)</version>
             <scope>provided</scope>
         </dependency>
+
+        <!-- Paper -->
         <dependency>
-            <groupId>org.bukkit</groupId>
-            <artifactId>bukkit</artifactId>
+            <groupId>com.destroystokyo.paper</groupId>
+            <artifactId>paper-api</artifactId>
             <version>${bukkit.version}</version>
             <scope>provided</scope>
         </dependency>

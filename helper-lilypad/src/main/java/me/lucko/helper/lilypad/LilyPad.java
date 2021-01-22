@@ -25,14 +25,12 @@
 
 package me.lucko.helper.lilypad;
 
+import lilypad.client.connect.api.Connect;
 import me.lucko.helper.messaging.InstanceData;
 import me.lucko.helper.messaging.Messenger;
 import me.lucko.helper.network.redirect.PlayerRedirector;
 import me.lucko.helper.profiles.Profile;
-
 import org.bukkit.entity.Player;
-
-import lilypad.client.connect.api.Connect;
 
 import javax.annotation.Nonnull;
 
@@ -52,7 +50,7 @@ public interface LilyPad extends Messenger, InstanceData, PlayerRedirector {
     /**
      * Requests that a certain player is moved to the given server.
      *
-     * @param serverId the id of the server
+     * @param serverId       the id of the server
      * @param playerUsername the username of the player
      */
     void redirectPlayer(@Nonnull String serverId, @Nonnull String playerUsername);
@@ -61,14 +59,14 @@ public interface LilyPad extends Messenger, InstanceData, PlayerRedirector {
      * Requests that a certain player is moved to the given server.
      *
      * @param serverId the id of the server
-     * @param player the player
+     * @param player   the player
      */
     default void redirectPlayer(@Nonnull String serverId, @Nonnull Player player) {
         redirectPlayer(serverId, player.getName());
     }
 
     @Override
-    default void redirectPlayer(String serverId, Profile profile) {
+    default void redirectPlayer(@Nonnull String serverId, Profile profile) {
         redirectPlayer(serverId, profile.getName().orElseThrow(() -> new IllegalArgumentException("Username must be set")));
     }
 }

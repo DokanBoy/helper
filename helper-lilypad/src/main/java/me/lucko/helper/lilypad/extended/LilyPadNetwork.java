@@ -42,7 +42,8 @@ import lilypad.client.connect.api.result.impl.GetPlayersResult;
 import java.util.concurrent.TimeUnit;
 
 public class LilyPadNetwork extends AbstractNetwork {
-    private ChannelReceiver<Integer> overallPlayerCount = new ChannelReceiver<>(5, TimeUnit.SECONDS);
+
+    private final ChannelReceiver<Integer> overallPlayerCount = new ChannelReceiver<>(5, TimeUnit.SECONDS);
 
     public LilyPadNetwork(LilyPad lilyPad) {
         super(lilyPad, lilyPad);

@@ -37,6 +37,7 @@ import javax.annotation.Nonnull;
 @HelperImplementationPlugin
 @MavenLibrary(groupId = "org.slf4j", artifactId = "slf4j-api", version = "1.7.30")
 public class HelperSqlPlugin extends ExtendedJavaPlugin implements SqlProvider {
+
     private DatabaseCredentials globalCredentials;
     private Sql globalDataSource;
 

@@ -85,11 +85,6 @@
                                     <include>me.lucko:shadow-bukkit</include>
                                     <include>com.flowpowered:flow-math</include>
                                     <include>net.jodah:expiringmap</include>
-                                    <include>net.kyori:adventure-api</include>
-                                    <include>net.kyori:adventure-serializer-configurate3</include>
-                                    <include>net.kyori:adventure-platform-bukkit</include>
-                                    <include>net.kyori:adventure-text-minimessage</include>
-                                    <include>net.kyori:adventure-text-feature-pagination</include>
                                     <include>org.spongepowered:configurate-core</include>
                                     <include>org.spongepowered:configurate-yaml</include>
                                     <include>org.spongepowered:configurate-gson</include>

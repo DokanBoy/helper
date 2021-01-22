@@ -32,12 +32,12 @@ import me.lucko.helper.redis.Redis;
 import me.lucko.helper.redis.RedisCredentials;
 import me.lucko.helper.redis.RedisProvider;
 
-import java.util.concurrent.CompletableFuture;
-
 import javax.annotation.Nonnull;
+import java.util.concurrent.CompletableFuture;
 
 @HelperImplementationPlugin
 public class HelperRedisPlugin extends ExtendedJavaPlugin implements RedisProvider {
+
     private RedisCredentials globalCredentials;
     private Redis globalRedis;
 

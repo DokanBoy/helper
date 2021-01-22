@@ -26,7 +26,6 @@
 package me.lucko.helper.redis.plugin;
 
 import com.google.common.reflect.TypeToken;
-
 import me.lucko.helper.Schedulers;
 import me.lucko.helper.messaging.AbstractMessenger;
 import me.lucko.helper.messaging.Channel;
@@ -34,27 +33,26 @@ import me.lucko.helper.redis.Redis;
 import me.lucko.helper.redis.RedisCredentials;
 import me.lucko.helper.terminable.composite.CompositeTerminable;
 import me.lucko.helper.utils.Log;
-
 import redis.clients.jedis.BinaryJedisPubSub;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
+import javax.annotation.Nonnull;
 import java.nio.charset.StandardCharsets;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-import javax.annotation.Nonnull;
-
 public class HelperRedis implements Redis {
 
     private final JedisPool jedisPool;
     private final AbstractMessenger messenger;
+    private final Set<String> channels = new HashSet<>();
+    private final CompositeTerminable registry = CompositeTerminable.create();
+
     private PubSubListener listener = null;
-    private Set<String> channels = new HashSet<>();
-    private CompositeTerminable registry = CompositeTerminable.create();
 
     public HelperRedis(@Nonnull RedisCredentials credentials) {
         JedisPoolConfig config = new JedisPoolConfig();
@@ -172,7 +170,8 @@ public class HelperRedis implements Redis {
     }
 
     private final class PubSubListener extends BinaryJedisPubSub {
-        private Set<String> subscribed = ConcurrentHashMap.newKeySet();
+
+        private final Set<String> subscribed = ConcurrentHashMap.newKeySet();
 
         @Override
         public void subscribe(byte[]... channels) {

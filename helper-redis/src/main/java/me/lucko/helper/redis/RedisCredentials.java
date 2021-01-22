@@ -27,10 +27,9 @@ package me.lucko.helper.redis;
 
 import org.bukkit.configuration.ConfigurationSection;
 
-import java.util.Objects;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.Objects;
 
 /**
  * Represents the credentials for a remote redis instance.

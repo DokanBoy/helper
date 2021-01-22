@@ -136,9 +136,11 @@
             <version>[5.0.0,6.0.0)</version>
             <scope>provided</scope>
         </dependency>
+
+        <!-- Paper -->
         <dependency>
-            <groupId>org.bukkit</groupId>
-            <artifactId>bukkit</artifactId>
+            <groupId>com.destroystokyo.paper</groupId>
+            <artifactId>paper-api</artifactId>
             <version>${bukkit.version}</version>
             <scope>provided</scope>
         </dependency>
@@ -147,7 +149,7 @@
         <dependency>
             <groupId>org.mongodb</groupId>
             <artifactId>mongo-java-driver</artifactId>
-            <version>3.9.1</version>
+            <version>3.12.7</version>
             <scope>compile</scope>
             <optional>true</optional>
         </dependency>
