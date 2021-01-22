@@ -128,7 +128,7 @@
         <!-- helper related dependencies -->
         <dependency>
             <groupId>me.lucko</groupId>
-            <artifactId>helper</artifactId>
+            <artifactId>helper-bukkit</artifactId>
             <version>[5.0.0,6.0.0)</version>
             <scope>provided</scope>
         </dependency>
