@@ -26,7 +26,7 @@
         <dependencies>
             <dependency>
                 <groupId>me.lucko</groupId>
-                <artifactId>helper</artifactId>
+                <artifactId>helper-bukkit</artifactId>
                 <version>${helper.bukkit.version}</version>
             </dependency>
             <dependency>
