@@ -7,22 +7,19 @@
     <groupId>me.lucko</groupId>
     <artifactId>helper-parent</artifactId>
     <version>5.0.0</version>
-
+    
     <modules>
-        <module>helper-bukkit</module>
+    	<module>helper</module>
         <module>helper-sql</module>
         <module>helper-redis</module>
         <module>helper-mongo</module>
         <module>helper-lilypad</module>
         <module>helper-js</module>
         <module>helper-profiles</module>
-        <module>helper-bom</module>
     </modules>
 
     <name>helper-parent</name>
-    <description>A collection of utilities and extended APIs to support the rapid and easy development of Bukkit
-        plugins.
-    </description>
+    <description>A collection of utilities and extended APIs to support the rapid and easy development of Bukkit plugins.</description>
     <url>https://github.com/lucko/helper</url>
 
     <licenses>

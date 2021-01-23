@@ -133,7 +133,7 @@
         <!-- helper related dependencies -->
         <dependency>
             <groupId>me.lucko</groupId>
-            <artifactId>helper-bukkit</artifactId>
+            <artifactId>helper</artifactId>
             <version>[5.0.0,6.0.0)</version>
             <scope>provided</scope>
         </dependency>
