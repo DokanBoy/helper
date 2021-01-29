@@ -25,14 +25,12 @@
 
 package me.lucko.helper.text;
 
-import net.kyori.adventure.text.Component;
-
 import java.util.Arrays;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * Utilities for working with {@link Component}s and formatted text strings.
+ * Utilities for working with and formatted text strings.
  */
 public final class Text {
 

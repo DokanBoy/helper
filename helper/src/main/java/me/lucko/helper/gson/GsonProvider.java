@@ -30,7 +30,6 @@ import me.lucko.helper.datatree.DataTree;
 import me.lucko.helper.gson.typeadapters.BukkitSerializableAdapterFactory;
 import me.lucko.helper.gson.typeadapters.GsonSerializableAdapterFactory;
 import me.lucko.helper.gson.typeadapters.JsonElementTreeSerializer;
-import net.kyori.adventure.text.serializer.gson.GsonComponentSerializer;
 
 import javax.annotation.Nonnull;
 import java.io.Reader;
@@ -48,16 +47,8 @@ public final class GsonProvider {
         .serializeNulls()
         .disableHtmlEscaping();
 
-    private static final Gson STANDARD_GSON = GsonComponentSerializer.gson()
-                                                                     .populator()
-                                                                     .apply(GSON_BUILDER)
-                                                                     .create();
-
-    private static final Gson PRETTY_PRINT_GSON = GsonComponentSerializer.gson()
-                                                                         .populator()
-                                                                         .apply(GSON_BUILDER)
-                                                                         .setPrettyPrinting()
-                                                                         .create();
+    private static final Gson STANDARD_GSON = GSON_BUILDER.create();
+    private static final Gson PRETTY_PRINT_GSON = GSON_BUILDER.setPrettyPrinting().create();
 
     private static final JsonParser PARSER = new JsonParser();
 
@@ -114,18 +105,6 @@ public final class GsonProvider {
 
     private GsonProvider() {
         throw new UnsupportedOperationException("This class cannot be instantiated");
-    }
-
-    @Nonnull
-    @Deprecated
-    public static Gson get() {
-        return standard();
-    }
-
-    @Nonnull
-    @Deprecated
-    public static Gson getPrettyPrinting() {
-        return prettyPrinting();
     }
 
 }

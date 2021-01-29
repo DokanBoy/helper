@@ -29,10 +29,11 @@ import com.comphenix.protocol.wrappers.WrappedChatComponent;
 import com.google.common.base.Preconditions;
 import me.lucko.helper.Events;
 import me.lucko.helper.plugin.HelperPlugin;
+import me.lucko.helper.text.Text;
 import me.lucko.helper.utils.Players;
 import me.lucko.helper.utils.annotation.NonnullByDefault;
-import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.serializer.gson.GsonComponentSerializer;
+import net.md_5.bungee.api.chat.TextComponent;
+import net.md_5.bungee.chat.ComponentSerializer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
@@ -259,7 +260,7 @@ public class PacketScoreboard implements Scoreboard {
     }
 
     static WrappedChatComponent toComponent(String text) {
-        return WrappedChatComponent.fromJson(GsonComponentSerializer.gson().serialize(Component.text(text)));
+        return WrappedChatComponent.fromJson(ComponentSerializer.toString(new TextComponent(Text.colorize(text))));
     }
 
 }

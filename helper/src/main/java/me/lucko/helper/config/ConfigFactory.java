@@ -30,7 +30,6 @@ import com.google.gson.JsonElement;
 import me.lucko.helper.config.typeserializers.*;
 import me.lucko.helper.datatree.DataTree;
 import me.lucko.helper.gson.GsonSerializable;
-import net.kyori.adventure.serializer.configurate3.ConfigurateComponentSerializer;
 import ninja.leaping.configurate.ConfigurationNode;
 import ninja.leaping.configurate.commented.CommentedConfigurationNode;
 import ninja.leaping.configurate.gson.GsonConfigurationLoader;
@@ -107,7 +106,7 @@ public abstract class ConfigFactory<N extends ConfigurationNode, L extends Confi
         helperSerializers.register(TypeToken.of(DataTree.class), JsonTreeTypeSerializer.INSTANCE);
         helperSerializers.register(TypeToken.of(String.class), ColoredStringTypeSerializer.INSTANCE);
 
-        TYPE_SERIALIZERS = ConfigurateComponentSerializer.configurate().addSerializersTo(helperSerializers);
+        TYPE_SERIALIZERS = helperSerializers;
     }
 
     @Nonnull

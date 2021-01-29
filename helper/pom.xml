@@ -85,11 +85,11 @@
                                     <include>me.lucko:shadow-bukkit</include>
                                     <include>com.flowpowered:flow-math</include>
                                     <include>net.jodah:expiringmap</include>
+                                    <include>com.typesafe:config</include>
                                     <include>org.spongepowered:configurate-core</include>
                                     <include>org.spongepowered:configurate-yaml</include>
                                     <include>org.spongepowered:configurate-gson</include>
                                     <include>org.spongepowered:configurate-hocon</include>
-                                    <include>com.typesafe:config</include>
                                     <include>net.kyori:event-api</include>
                                 </includes>
                             </artifactSet>
@@ -101,10 +101,6 @@
                                 <relocation>
                                     <pattern>com.typesafe.config</pattern>
                                     <shadedPattern>${shade.pattern}hocon</shadedPattern>
-                                </relocation>
-                                <relocation>
-                                    <pattern>net.kyori.adventure</pattern>
-                                    <shadedPattern>me.lucko.helper.adventure</shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>net.kyori.event</pattern>
@@ -155,7 +151,6 @@
     </profiles>
 
     <dependencies>
-
         <!-- Paper -->
         <dependency>
             <groupId>com.destroystokyo.paper</groupId>
@@ -185,7 +180,8 @@
             <version>0.5.9</version>
             <scope>compile</scope>
         </dependency>
-        <!-- configurate -->
+
+        <!-- Configurate -->
         <dependency>
             <groupId>org.spongepowered</groupId>
             <artifactId>configurate-core</artifactId>
@@ -247,38 +243,6 @@
             </exclusions>
         </dependency>
 
-        <!-- Adventure -->
-        <dependency>
-            <groupId>net.kyori</groupId>
-            <artifactId>adventure-api</artifactId>
-            <version>${adventure.version}</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>net.kyori</groupId>
-            <artifactId>adventure-serializer-configurate3</artifactId>
-            <version>${adventure.version}</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>net.kyori</groupId>
-            <artifactId>adventure-platform-bukkit</artifactId>
-            <version>${adventure.features.version}</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>net.kyori</groupId>
-            <artifactId>adventure-text-minimessage</artifactId>
-            <version>${adventure.features.version}</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>net.kyori</groupId>
-            <artifactId>adventure-text-feature-pagination</artifactId>
-            <version>${adventure.features.version}</version>
-            <scope>compile</scope>
-        </dependency>
-
         <!-- event -->
         <dependency>
             <groupId>net.kyori</groupId>
@@ -293,14 +257,15 @@
             <scope>compile</scope>
         </dependency>
 
-        <!-- protocollib -->
+        <!-- ProtocolLib -->
         <dependency>
             <groupId>com.comphenix.protocol</groupId>
             <artifactId>ProtocolLib</artifactId>
             <version>4.6.0-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
-        <!-- citizens -->
+
+        <!-- Citizens -->
         <dependency>
             <groupId>net.citizensnpcs</groupId>
             <artifactId>citizens</artifactId>
@@ -313,7 +278,8 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <!-- viaversion -->
+
+        <!-- viaversion todo: update -->
         <dependency>
             <groupId>us.myles</groupId>
             <artifactId>viaversion</artifactId>
@@ -326,6 +292,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
     </dependencies>
 
 </project>
